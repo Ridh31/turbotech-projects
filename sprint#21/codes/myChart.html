@@ -1,0 +1,126 @@
+@extends('master')
+@section('content')
+
+<div class="headingContainer">
+    <h1 class="headingText">  <i class="{{ $icon }} headingIcon"> </i> {{ $title }} </h1>
+</div>
+
+<!-- Design Simple Stats -->
+
+<!-- main -->
+<div class="mainCard">
+    <!-- main card -->
+    <ul class="cardContainer grid-cols-1">
+
+        <!-- chart -->
+        <li class="eachCard px-0 pt-0 col-span-2 md:col-span-1">
+            <div class="flex divide-x h-12 border-b divide-secondary-200 p-0">
+                <h2 class="p-3 font-md w-full block font-medium dark:text-gray-100">Design Simple Stats </h2>
+            </div>
+            <div class="p-2 sm:p-5">
+                <canvas id="simpleChart" class="min-h-min sm:min-h-[20rem]"></canvas>
+            </div>
+        </li>
+        <!-- chart -->
+    </ul>
+</div>  
+
+@endsection
+
+@section('internalScript')
+
+<!-- Chart CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!-- graph JS link -->
+<script type="text/javascript" src="jscript/graph.js"></script>
+
+<script>
+
+    //simpleChar function
+    const simpleChartFunction = () => {
+        
+        // simple chart config
+        const simpleChartConfig = {
+            maintainAspectRatio: true, // true: graph size bigger
+            responsive: true,
+            scales: {
+                y: {
+                    stacked: true,
+                    grid: {
+                        display: true,
+                        color: "rgba(255,99,132,0.2)"
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        // chart data
+        const chartData = {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            datasets: [
+                {
+                    label: "Total",
+                    backgroundColor: "rgba(31, 168, 224, 0.4)",
+                    borderColor: "rgba(31, 168, 224, 1)",
+                    borderWidth: 2,
+                    hoverBackgroundColor: "rgba(31,168,224,0.6)",
+                    hoverBorderColor: "rgba(31, 168, 224, 1)",
+                    stack: "combined",
+                    type: "line",
+                    data: [65, 245, 67, 125, 93, 67, 147, 234, 35, 85, 56, 67],
+                },
+                {
+                    label: "Accept",
+                    backgroundColor: "rgba(60, 186, 159, 1)",
+                    borderColor: "rgba(60, 186, 159, 1)",
+                    borderWidth: 2,
+                    hoverBackgroundColor: "rgba(60, 186, 159, 1)",
+                    hoverBorderColor: "rgba(60, 186, 159, 1)",
+                    stack: "combined",
+                    data: [50, 100, 35, 81, 80, 55, 65, 100, 35, 81, 56, 55],
+                },
+                {
+                    label: "Pending",
+                    backgroundColor: "rgba(255, 165, 0, 1)",
+                    borderColor: "rgba(255, 165, 0, 1)",
+                    borderWidth: 2,
+                    hoverBorderColor: "rgba(255, 165, 0, 1)",
+                    hoverBackgroundColor: "rgba(255, 165, 0, 1)",
+                    stack: "combined",
+                    data: [65, 234, 67, 85, 56, 67, 65, 234, 35, 85, 56, 67],
+                },
+                {
+                    label: "Reject",
+                    backgroundColor: "rgba(196, 88, 80, 1)",
+                    borderColor: "rgba(196, 88, 80, 1)",
+                    borderWidth: 2,
+                    hoverBackgroundColor: "rgba(196, 88, 80, 1)",
+                    hoverBorderColor: "rgba(196, 88, 80, 1)",
+                    stack: "combined",
+                    data: [25, 70, 35, 105, 56, 67, 147, 234, 35, 85, 56, 67],
+                }
+            ]
+        };
+
+        const chart = document.querySelector('#simpleChart');
+
+        // draw simple chart with chart data
+
+        const simpleChart = new Chart(chart, {
+            type: 'bar',
+            options: simpleChartConfig,
+            data: chartData
+        });
+    }
+
+    // call function
+    simpleChartFunction();
+
+</script>
+
+@endsection

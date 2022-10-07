@@ -1,0 +1,84 @@
+@extends('master')
+@section('content')
+
+<div class="headingContainer">
+    <h1 class="headingText">  <i class="{{ $icon }} headingIcon"> </i> {{ $title }} </h1>
+</div>
+
+<!-- Design stats with Stacked bar/line -->
+
+<!-- main -->
+<div class="mainCard">
+    <!-- main card -->
+    <ul class="cardContainer grid-cols-1">
+
+        <!-- chart -->
+        <li class="eachCard px-0 pt-0 col-span-2 md:col-span-1">
+            <div class="flex divide-x h-12 border-b divide-secondary-200 p-0">
+                <h2 class="p-3 font-md w-full block font-medium dark:text-gray-100">Design stats with Stacked bar/line </h2>
+            </div>
+            <div class="p-2 sm:p-5">
+                <canvas id="barChartWithLine" class="min-h-min sm:min-h-[20rem]"></canvas>
+            </div>
+        </li>
+        <!-- chart -->
+    </ul>
+</div>  
+
+@endsection
+
+@section('internalScript')
+
+<!-- Chart CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!-- graph JS link -->
+<script type="text/javascript" src="jscript/graph.js"></script>
+
+<script>
+
+    // statsWithStackedBarLine function
+    const statsWithStackedBarLine = () => {
+
+        // chart data
+        const barChartWithLineData = {
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            datasets: [
+                {
+                    label: "New",
+                    backgroundColor: "rgb(31,168,224,0.2)",
+                    borderColor: "rgba(31,168,224,1)",
+                    borderWidth: 2,
+                    hoverBackgroundColor: "rgba(31,168,224,0.4)",
+                    hoverBorderColor: "rgba(31,168,224,1)",
+                    data: [65, 234, 35, 165, 56, 67],
+                    stack: 'combined',
+                    type: 'line'
+                },
+                {
+                    label: "Contacted",
+                    backgroundColor: "rgb(92,224,31,0.2)",
+                    borderColor: "rgba(92,224,31,1)",
+                    borderWidth: 2,
+                    hoverBackgroundColor: "rgba(92,224,31,0.4)",
+                    hoverBorderColor: "rgba(92,224,31,1)",
+                    data: [65, 100, 35, 81, 56, 55],
+                    stack: 'combined',
+                }
+            ]
+        };
+
+        const chart = document.querySelector('#barChartWithLine');
+
+        // Draw chart structure with chart data
+        const stats = new Chart(chart, {
+            type: 'bar',
+            data: barChartWithLineData
+        });
+    }
+
+    // call function
+    statsWithStackedBarLine();
+
+</script>
+
+@endsection
