@@ -31,8 +31,8 @@
 
                     <!-- header items, search, etc... -->
                     <div class="flex flex-col 2xl:flex-row justify-center items-center mt-5">
-
                         <div class="flex">
+
                             <!-- search bar -->
                             <div class="relative bg-white my-auto shadow-md rounded-lg">
                                 <svg class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-[color:rgba(var(--ni-gray-400))]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -82,7 +82,7 @@
                     <ul id="product-items" class="cardContainer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
 
                         <!-- product 1 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 1">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 1">
 
                             <!-- product 1: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -102,7 +102,7 @@
                         </li>
 
                         <!-- product 2 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 2">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 2">
 
                             <!-- product 2: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -122,7 +122,7 @@
                         </li>
 
                         <!-- product 3 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 3">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 3">
 
                             <!-- product 3: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -142,7 +142,7 @@
                         </li>
 
                         <!-- product 4 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 4">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 4">
 
                             <!-- product 4: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -162,7 +162,7 @@
                         </li>
 
                         <!-- product 5 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 5">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 5">
 
                             <!-- product 5: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -182,7 +182,7 @@
                         </li>
 
                         <!-- product 6 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 6">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 6">
 
                             <!-- product 6: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -202,7 +202,7 @@
                         </li>
 
                         <!-- product 7 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 7">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 7">
 
                             <!-- product 7: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -222,7 +222,7 @@
                         </li>
 
                         <!-- product 8 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 8">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 8">
 
                             <!-- product 8: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -242,7 +242,7 @@
                         </li>
 
                         <!-- product 9 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 9">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 9">
 
                             <!-- product 9: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -262,7 +262,7 @@
                         </li>
 
                         <!-- product 10 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 10">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 10">
 
                             <!-- product 10: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -282,7 +282,7 @@
                         </li>
 
                         <!-- product 11 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 11">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 11">
 
                             <!-- product 11: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -302,7 +302,7 @@
                         </li>
 
                         <!-- product 12 -->
-                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 12">
+                        <li class="cursor-pointer p-4 pb-6 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 12">
 
                             <!-- product 12: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -339,7 +339,7 @@
                     <!-- recipient -->
                     <div class="flex space-x-3">
                         <div class="text-lg xl:text-xl font-medium">Recipient : Ridh</div>
-                        <svg class="w-7 h-7" viewBox="0 0 64 64" id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css"> .st0{fill:#B4E6DD;} .st1{fill:#80D4C4;} .st2{fill:#D2F0EA;} .st3{fill:#FFFFFF;} .st4{fill:#FBD872;} .st5{fill:#DB7767;} .st6{fill:#F38E7A;} .st7{fill:#F6AF62;} .st8{fill:#32A48E;} .st9{fill:#A38FD8;} .st10{fill:#7C64BD;} .st11{fill:#EAA157;} .st12{fill:#9681CF;} .st13{fill:#F9C46A;} .st14{fill:#CE6B61;}</style><g>
+                        <svg class="w-7 h-7 animate-bounce" viewBox="0 0 64 64" id="Layer_1" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css"> .st0{fill:#B4E6DD;} .st1{fill:#80D4C4;} .st2{fill:#D2F0EA;} .st3{fill:#FFFFFF;} .st4{fill:#FBD872;} .st5{fill:#DB7767;} .st6{fill:#F38E7A;} .st7{fill:#F6AF62;} .st8{fill:#32A48E;} .st9{fill:#A38FD8;} .st10{fill:#7C64BD;} .st11{fill:#EAA157;} .st12{fill:#9681CF;} .st13{fill:#F9C46A;} .st14{fill:#CE6B61;}</style><g>
                             <path class="st6" d="M32,8c-9.54,0-17.27,7.73-17.27,17.27S32,56,32,56s17.27-21.19,17.27-30.73S41.54,8,32,8z M32,36.54   c-6.21,0-11.27-5.06-11.27-11.27S25.79,14,32,14c6.21,0,11.27,5.06,11.27,11.27S38.21,36.54,32,36.54z"/><path class="st2" d="M39.32,22.97c-4.04-4.04-10.6-4.04-14.64,0l-2.3,2.3l2.3,2.3c4.04,4.04,10.6,4.04,14.64,0l2.3-2.3L39.32,22.97   z"/><path class="st9" d="M34,24.77c-0.83,0-1.5-0.67-1.5-1.5c0-0.54,0.29-1.01,0.71-1.27c-0.38-0.14-0.78-0.23-1.21-0.23   c-1.93,0-3.5,1.57-3.5,3.5s1.57,3.5,3.5,3.5s3.5-1.57,3.5-3.5c0-0.43-0.09-0.83-0.23-1.21C35.01,24.48,34.54,24.77,34,24.77z"/></g>
                         </svg>
                     </div>
@@ -459,7 +459,7 @@
                             `),
 
                 fernPlant     : (`
-                                <!-- product order 1 -->
+                                <!-- product order 2 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="2">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Fern Plant</div>
@@ -484,7 +484,7 @@
                             `),
 
                 houseplant    : (`
-                                <!-- product order 1 -->
+                                <!-- product order 3 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="3">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Houseplant</div>
@@ -509,7 +509,7 @@
                             `),
 
                 dracaena      : (`
-                                <!-- product order 1 -->
+                                <!-- product order 4 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="4">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Dracaena</div>
@@ -534,7 +534,7 @@
                             `),
 
                 aloeVera      : (`
-                                <!-- product order 1 -->
+                                <!-- product order 5 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="5">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Aloe Vera</div>
@@ -559,7 +559,7 @@
                             `),
 
                 cactusPlant   : (`
-                                <!-- product order 1 -->
+                                <!-- product order 6 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="6">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Cactus Plant</div>
@@ -583,7 +583,7 @@
                                 </li>
                             `),
                 swissCheese   : (`
-                                <!-- product order 1 -->
+                                <!-- product order 7 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="7">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Swiss Cheese</div>
@@ -608,7 +608,7 @@
                             `),
 
                 chamaedorea   : (`
-                                <!-- product order 1 -->
+                                <!-- product order 8 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="8">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Chamaedorea</div>
@@ -633,7 +633,7 @@
                             `),
 
                 coleus        : (`
-                                <!-- product order 1 -->
+                                <!-- product order 9 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="9">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Coleus</div>
@@ -658,7 +658,7 @@
                             `),
 
                 coralBells    : (`
-                                <!-- product order 1 -->
+                                <!-- product order 10 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="10">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Coral Bells</div>
@@ -683,7 +683,7 @@
                             `),
 
                 marigold      : (`
-                                <!-- product order 1 -->
+                                <!-- product order 11 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="11">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Marigold</div>
@@ -708,7 +708,7 @@
                             `),
 
                 easterLily    : (`
-                                <!-- product order 1 -->
+                                <!-- product order 12 -->
                                 <li class="flex py-8 border-b border-[color:rgba(var(--ni-gray-300))]" data-product="12">
                                     <div class="w-full space-y-3 my-auto">
                                         <div class="font-medium text-2xl text-center 2xl:text-start">Easter Lily</div>

@@ -121,7 +121,7 @@
                     <ul id="product-items" class="cardContainer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
 
                         <!-- product 1 -->
-                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 1">
+                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 1">
 
                             <!-- product 1: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -148,7 +148,7 @@
                         </li>
 
                         <!-- product 2 -->
-                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 2">
+                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 2">
 
                             <!-- product 2: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -175,7 +175,7 @@
                         </li>
 
                         <!-- product 3 -->
-                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 3">
+                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 3">
 
                             <!-- product 3: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -202,7 +202,7 @@
                         </li>
 
                         <!-- product 4 -->
-                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 4">
+                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 4">
 
                             <!-- product 4: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -229,7 +229,7 @@
                         </li>
 
                         <!-- product 5 -->
-                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 5">
+                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 5">
 
                             <!-- product 5: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -256,7 +256,7 @@
                         </li>
 
                         <!-- product 6 -->
-                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative hover:scale-105 duration-150" data-value="product 6">
+                        <li class="cursor-pointer p-4 bg-white space-y-4 shadow-lg rounded-xl relative translate-y-3 hover:translate-y-0 duration-150" data-value="product 6">
 
                             <!-- product 6: image -->
                             <div class="flex justify-center items-center border border-[color:rgba(var(--ni-gray-300))] rounded-lg">
@@ -335,7 +335,6 @@
                 <div class="">
                     <button class="w-full text-white py-3 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[color:rgba(var(--ni-primary-600))] rounded-xl duration-300">Print Receipt</button>
                 </div>
-
             </div>
         </div>
     </div> 
@@ -431,7 +430,7 @@
                             `),
 
                 secondProduct : (`
-                                <!-- product order 1 -->
+                                <!-- product order 2 -->
                                 <li class="flex rounded-xl" data-product="1">
                                     <div class="flex-none border border-[color:rgba(var(--ni-gray-300))] my-auto rounded-lg">
                                         <img class="w-20 h-20 object-cover rounded-full" src="https://ph-test-11.slatic.net/p/mdc/b9342cce7f4587b4801e97fa68cb4eb0.jpg" alt="Dog Food 'Yum Yum' - Adult Version">
@@ -454,7 +453,7 @@
                             `),
 
                 thirdProduct  : (`
-                                <!-- product order 1 -->
+                                <!-- product order 3 -->
                                 <li class="flex rounded-xl" data-product="1">
                                     <div class="flex-none border border-[color:rgba(var(--ni-gray-300))] my-auto rounded-lg">
                                         <img class="w-20 h-20 object-cover rounded-full" src="https://imgcache.dealmoon.com/thumbimg.dealmoon.com/dealmoon/824/de1/134/4898f70533753399b278826.jpg_600_0_3_4b24.jpg" alt="JCPenney YUM Dog Food Bowl 17.00">
@@ -477,7 +476,7 @@
                             `),
 
                 fouthProduct  : (`
-                                <!-- product order 1 -->
+                                <!-- product order 4 -->
                                 <li class="flex rounded-xl" data-product="1">
                                     <div class="flex-none border border-[color:rgba(var(--ni-gray-300))] my-auto rounded-lg">
                                         <img class="w-20 h-20 object-cover rounded-full" src="https://lzd-img-global.slatic.net/g/p/8486dac7f1b2120268fdf00c9bfbd267.jpg_720x720q80.jpg_.webp" alt="Dog Food 'Araton' - Junior Version">
@@ -500,7 +499,7 @@
                             `),
 
                 fifthProduct  : (`
-                                <!-- product order 1 -->
+                                <!-- product order 5 -->
                                 <li class="flex rounded-xl" data-product="1">
                                     <div class="flex-none border border-[color:rgba(var(--ni-gray-300))] my-auto rounded-lg">
                                         <img class="w-20 h-20 object-cover rounded-full" src="https://lzd-img-global.slatic.net/g/p/cf690d9db827632fc1dfba46c6462c64.jpg_720x720q80.jpg_.webp" alt="Dog Food 'Araton' - 1 Year Version">
@@ -523,7 +522,7 @@
                             `),
 
                 sixthProduct  : (`
-                                <!-- product order 1 -->
+                                <!-- product order 6 -->
                                 <li class="flex rounded-xl" data-product="1">
                                     <div class="flex-none border border-[color:rgba(var(--ni-gray-300))] my-auto rounded-lg">
                                         <img class="w-20 h-20 object-cover rounded-full" src="https://medicalanka.com/wp-content/uploads/Araton-Adult.png" alt="Dog Food 'Araton' - Adult Version">

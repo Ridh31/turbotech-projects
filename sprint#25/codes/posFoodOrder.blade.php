@@ -368,9 +368,13 @@
                                     <div class="w-full space-y-3 ml-2 my-auto">
                                         <div class="flex">
                                             <div class="font-medium text-sm 2xl:text-lg">Almond Brown Sugar Croissant</div>
-                                            <div id="remove-food" class="cursor-pointer ml-auto hover:text-[color:rgba(var(--ni-danger-500))]">–</div>
+                                            <div class="cursor-pointer ml-auto p-1 hover:bg-[color:rgba(var(--ni-gray-200))] rounded-full duration-150">
+                                                <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <path style="fill:#78B9EB;" d="M331.636,110.545H180.364V0h151.273V110.545z M215.273,75.636h81.455V34.909h-81.455V75.636z"/><rect x="87.273" y="162.909" style="fill:#C9E3F7;" width="337.455" height="349.091"/><rect x="256" y="162.909" style="fill:#78B9EB;" width="168.727" height="349.091"/><rect x="52.364" y="69.818" style="fill:#FFC170;" width="407.273" height="128"/><rect x="256" y="69.818" style="fill:#FF9811;" width="203.636" height="128"/><g><rect x="168.727" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="308.364" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="238.545" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                                </svg>
+                                            </div>
                                         </div>
-                                        
+
                                         <div class="flex">
                                             <div class="font-medium text-[color:rgba(var(--ni-danger-500))]">$12.98</div>
                                             <div class="flex space-x-2 xl:space-x-3 2xl:space-4 ml-auto my-auto">
@@ -393,7 +397,11 @@
                                     <div class="w-full space-y-3 ml-2 my-auto">
                                         <div class="flex">
                                             <div class="font-medium text-sm 2xl:text-lg">Almond Brown Sugar Croissant</div>
-                                            <div class="cursor-pointer ml-auto hover:text-[color:rgba(var(--ni-danger-500))]">–</div>
+                                            <div class="cursor-pointer ml-auto p-1 hover:bg-[color:rgba(var(--ni-gray-200))] rounded-full duration-150">
+                                                <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <path style="fill:#78B9EB;" d="M331.636,110.545H180.364V0h151.273V110.545z M215.273,75.636h81.455V34.909h-81.455V75.636z"/><rect x="87.273" y="162.909" style="fill:#C9E3F7;" width="337.455" height="349.091"/><rect x="256" y="162.909" style="fill:#78B9EB;" width="168.727" height="349.091"/><rect x="52.364" y="69.818" style="fill:#FFC170;" width="407.273" height="128"/><rect x="256" y="69.818" style="fill:#FF9811;" width="203.636" height="128"/><g><rect x="168.727" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="308.364" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="238.545" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                                </svg>
+                                            </div>
                                         </div>
                                         
                                         <div class="flex">
@@ -418,7 +426,11 @@
                                     <div class="w-full space-y-3 ml-2 my-auto">
                                         <div class="flex">
                                             <div class="font-medium text-sm 2xl:text-lg">Berry Whipped Cream Croissant</div>
-                                            <div class="cursor-pointer ml-auto hover:text-[color:rgba(var(--ni-danger-500))]">–</div>
+                                            <div class="cursor-pointer ml-auto p-1 hover:bg-[color:rgba(var(--ni-gray-200))] rounded-full duration-150">
+                                                <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <path style="fill:#78B9EB;" d="M331.636,110.545H180.364V0h151.273V110.545z M215.273,75.636h81.455V34.909h-81.455V75.636z"/><rect x="87.273" y="162.909" style="fill:#C9E3F7;" width="337.455" height="349.091"/><rect x="256" y="162.909" style="fill:#78B9EB;" width="168.727" height="349.091"/><rect x="52.364" y="69.818" style="fill:#FFC170;" width="407.273" height="128"/><rect x="256" y="69.818" style="fill:#FF9811;" width="203.636" height="128"/><g><rect x="168.727" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="308.364" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="238.545" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                                </svg>
+                                            </div>
                                         </div>
                                         
                                         <div class="flex">
@@ -443,7 +455,11 @@
                                     <div class="w-full space-y-3 ml-2 my-auto">
                                         <div class="flex">
                                             <div class="font-medium text-sm 2xl:text-lg">Sweet Granulated Sugar Croissant</div>
-                                            <div class="cursor-pointer ml-auto hover:text-[color:rgba(var(--ni-danger-500))]">–</div>
+                                            <div class="cursor-pointer ml-auto p-1 hover:bg-[color:rgba(var(--ni-gray-200))] rounded-full duration-150">
+                                                <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <path style="fill:#78B9EB;" d="M331.636,110.545H180.364V0h151.273V110.545z M215.273,75.636h81.455V34.909h-81.455V75.636z"/><rect x="87.273" y="162.909" style="fill:#C9E3F7;" width="337.455" height="349.091"/><rect x="256" y="162.909" style="fill:#78B9EB;" width="168.727" height="349.091"/><rect x="52.364" y="69.818" style="fill:#FFC170;" width="407.273" height="128"/><rect x="256" y="69.818" style="fill:#FF9811;" width="203.636" height="128"/><g><rect x="168.727" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="308.364" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="238.545" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                                </svg>
+                                            </div>
                                         </div>
                                         
                                         <div class="flex">
@@ -468,7 +484,11 @@
                                     <div class="w-full space-y-3 ml-2 my-auto">
                                         <div class="flex">
                                             <div class="font-medium text-sm 2xl:text-lg">Sweet Chocolate Chocochips Croissant</div>
-                                            <div class="cursor-pointer ml-auto hover:text-[color:rgba(var(--ni-danger-500))]">–</div>
+                                            <div class="cursor-pointer ml-auto p-1 hover:bg-[color:rgba(var(--ni-gray-200))] rounded-full duration-150">
+                                                <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <path style="fill:#78B9EB;" d="M331.636,110.545H180.364V0h151.273V110.545z M215.273,75.636h81.455V34.909h-81.455V75.636z"/><rect x="87.273" y="162.909" style="fill:#C9E3F7;" width="337.455" height="349.091"/><rect x="256" y="162.909" style="fill:#78B9EB;" width="168.727" height="349.091"/><rect x="52.364" y="69.818" style="fill:#FFC170;" width="407.273" height="128"/><rect x="256" y="69.818" style="fill:#FF9811;" width="203.636" height="128"/><g><rect x="168.727" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="308.364" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="238.545" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                                </svg>
+                                            </div>
                                         </div>
                                         
                                         <div class="flex">
@@ -493,7 +513,11 @@
                                     <div class="w-full space-y-3 ml-2 my-auto">
                                         <div class="flex">
                                             <div class="font-medium text-sm 2xl:text-lg">Basic Croissant La Ta Dhore</div>
-                                            <div class="cursor-pointer ml-auto hover:text-[color:rgba(var(--ni-danger-500))]">–</div>
+                                            <div class="cursor-pointer ml-auto p-1 hover:bg-[color:rgba(var(--ni-gray-200))] rounded-full duration-150">
+                                                <svg class="w-5 h-5" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <path style="fill:#78B9EB;" d="M331.636,110.545H180.364V0h151.273V110.545z M215.273,75.636h81.455V34.909h-81.455V75.636z"/><rect x="87.273" y="162.909" style="fill:#C9E3F7;" width="337.455" height="349.091"/><rect x="256" y="162.909" style="fill:#78B9EB;" width="168.727" height="349.091"/><rect x="52.364" y="69.818" style="fill:#FFC170;" width="407.273" height="128"/><rect x="256" y="69.818" style="fill:#FF9811;" width="203.636" height="128"/><g><rect x="168.727" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="308.364" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/><rect x="238.545" y="256" style="fill:#3C5D76;" width="34.909" height="162.909"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                                                </svg>
+                                            </div>
                                         </div>
                                         
                                         <div class="flex">
