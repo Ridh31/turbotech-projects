@@ -17,10 +17,9 @@
             <!-- login form -->
             <div class="h-full w-full md:w-[90%] lg:w-[40%] max-w-md lg:max-w-full p-5 lg:items-center overflow-auto bg-white rounded-xl sm:rounded-xl md:rounded-l-xl lg:rounded-l-xl lg:rounded-r-none">
 
-                <!-- title -->
-                <div class="flex flex-row space-x-0 justify-center items-center font-bold text-xl mt-5">
-                    <span class="text-[color:rgba(var(--ni-danger-500))]">TURBO</span>
-                    <span class="text-[color:rgba(var(--ni-primary-500))]">TECH</span>
+                <!-- logo image -->
+                <div class="flex justify-center items-center mt-5">
+                    <img class="w-60 object-contain" src="https://www.turbotech.com/storages/assets/img/system/turbotech.png" alt="">
                 </div>
 
                 <form class="mt-20 px-0 sm:px-5" id="classic-split-login">
@@ -79,6 +78,72 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
 <script>
+
+    // Classic Split Login function
+    const classicSplitLogin = () => {
+
+        const splitLoginForm = $("#classic-split-login");
+        const inputs         = $("#inputs-container div input");
+        const inputDefault   = ("border border-[color:rgba(var(--ni-primary-200))] bg-[color:rgba(var(--ni-primary-100))]");
+        const inputError     = ("border border-[color:rgba(var(--ni-danger-300))] bg-[color:rgba(var(--ni-danger-50))]");
+        const messageClass   = ("text-sm text-[color:rgba(var(--ni-danger-500))]");
+
+        // validation
+        splitLoginForm.validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                }
+            },
+
+            // error message
+            messages: {
+                name: "Please enter your name",
+                email: {
+                    required: "Please enter your email",
+                    email: "Enter a valid email or phone number"
+                },
+                password: {
+                    required: "Please enter your password",
+                    minlength: "Passwords must be at least 6 characters"
+                }
+            },
+
+            submitHandler: function(form) {
+                form.submit();
+            },
+
+            // custom error messages styles
+            errorPlacement: function(error, element) { 
+
+                element.removeClass(inputDefault);
+                element.addClass(inputError);
+
+                error.addClass(messageClass);
+                error.css("margin-top", "0px"); 
+                error.insertAfter(element); 
+            },
+
+            // success
+            success: function(error) {             
+                
+                inputs.each(function() {
+                    $(this).removeClass(inputError);
+                    $(this).addClass(inputDefault);
+                });
+
+                // remove error messages
+                error.remove();
+            }
+        });
+
+    }
 
     // call function
     classicSplitLogin();

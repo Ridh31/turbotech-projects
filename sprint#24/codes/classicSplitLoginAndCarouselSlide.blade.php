@@ -61,7 +61,7 @@
 
                                         <!-- item 1: buttons -->
                                         <div class="flex lg:flex-col xl:flex-row lg:space-x-0 lg:space-y-2 xl:space-x-2 xl:space-y-0 my-5">
-                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:bg-[color:rgba(var(--ni-gray-500))] hover:text-white rounded-lg duration-300">Cancel</button>
+                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:border-[color:rgba(var(--ni-danger-500))] hover:bg-[color:rgba(var(--ni-danger-500))] hover:text-white rounded-lg duration-300">Cancel</button>
                                             <button class="w-full p-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[rgba(var(--ni-primary-600))] text-white rounded-lg duration-300">Reply</button>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@
                                                 <input type="text" class="outline-none text-sm mr-auto px-5 w-full bg-[color:rgba(var(--ni-primary-100))] border border-[color:rgba(var(--ni-primary-200))] rounded-l-lg" placeholder="Type here...">
 
                                                 <!-- send text button -->
-                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-gray-400))] hover:bg-[color:rgba(var(--ni-gray-500))] fill-white rounded-r-lg duration-300">
+                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[color:rgba(var(--ni-primary-600))] fill-white rounded-r-lg duration-300">
                                                     <svg class="w-5 h-5" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_5_attachment"/><g id="_x32_4_office"/><g id="_x32_3_pin"/><g id="_x32_2_business_card"/><g id="_x32_1_form"/><g id="_x32_0_headset"/><g id="_x31_9_video_call"/><g id="_x31_8_letter_box"/><g id="_x31_7_papperplane"><g><g>
                                                         <path d="M62.9891,2.5618c-0.0765-0.5779-0.6611-0.9805-1.2299-0.8401L7.4043,15.2065c-0.3535,0.0879-0.6318,0.3608-0.7256,0.7129     s0.0112,0.7275,0.2744,0.9795l13.9343,13.3583l-2.7649,17.1495c-0.1079,0.6712,0.4969,1.2576,1.1582,1.1445l18.0805-3.1324     l17.1832,9.6988c0.1523,0.0859,0.3218,0.1289,0.4917,0.1289c0.1523,0,0.3047-0.0347,0.4453-0.1045     c0.2969-0.1475,0.5015-0.4331,0.5459-0.7617l6.9639-51.5542C63.0031,2.7372,63.0007,2.6487,62.9891,2.5618z M9.647,16.7109     L56.8914,4.9902L22.2545,28.7978L9.647,16.7109z M36.9146,43.4663l-16.5942,2.875l2.4995-15.5054L58.8633,6.0615L36.9146,43.4663     z M54.2427,52.6504l-15.3231-8.6492l21.4231-36.509L54.2427,52.6504z"/><path d="M14.4438,51.6099l-4.6948,5.209c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6948-5.209c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C15.4463,51.1675,14.8135,51.2002,14.4438,51.6099z"/><path d="M5.9478,29.0562l-4.6909,5.2085c-0.3696,0.4106-0.3364,1.043,0.0742,1.4126c0.1909,0.1719,0.4302,0.2568,0.6685,0.2568     c0.2739,0,0.5459-0.1113,0.7437-0.3311l4.6909-5.2085c0.3696-0.4106,0.3364-1.043-0.0742-1.4126     C6.9487,28.6128,6.3179,28.6455,5.9478,29.0562z"/><path d="M40.8164,55.4331l-4.6909,5.2051c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6909-5.2051c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C41.8188,54.9907,41.186,55.0234,40.8164,55.4331z"/></g></g></g><g id="_x31_6_laptop"/><g id="_x31_5_connection"/><g id="_x31_4_phonebook"/><g id="_x31_3_classic_telephone"/><g id="_x31_2_sending_mail"/><g id="_x31_1_man_talking"/><g id="_x31_0_date"/><g id="_x30_9_review"/><g id="_x30_8_email"/><g id="_x30_7_information"/><g id="_x30_6_phone_talking"/><g id="_x30_5_women_talking"/><g id="_x30_4_calling"/><g id="_x30_3_women"/><g id="_x30_2_writing"/><g id="_x30_1_chatting"/>
                                                     </svg>                                                    
@@ -169,7 +169,7 @@
 
                                         <!-- item 2: buttons -->
                                         <div class="flex lg:flex-col xl:flex-row lg:space-x-0 lg:space-y-2 xl:space-x-2 xl:space-y-0 my-5">
-                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:bg-[color:rgba(var(--ni-gray-500))] hover:text-white rounded-lg duration-300">Cancel</button>
+                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:border-[color:rgba(var(--ni-danger-500))] hover:bg-[color:rgba(var(--ni-danger-500))] hover:text-white rounded-lg duration-300">Cancel</button>
                                             <button class="w-full p-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[rgba(var(--ni-primary-600))] text-white rounded-lg duration-300">Reply</button>
                                         </div>
                                     </div>
@@ -224,7 +224,7 @@
                                                 <input type="text" class="outline-none text-sm mr-auto px-5 w-full bg-[color:rgba(var(--ni-primary-100))] border border-[color:rgba(var(--ni-primary-200))] rounded-l-lg" placeholder="Type here...">
 
                                                 <!-- send text button -->
-                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-gray-400))] hover:bg-[color:rgba(var(--ni-gray-500))] fill-white rounded-r-lg duration-300">
+                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[color:rgba(var(--ni-primary-600))] fill-white rounded-r-lg duration-300">
                                                     <svg class="w-5 h-5" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_5_attachment"/><g id="_x32_4_office"/><g id="_x32_3_pin"/><g id="_x32_2_business_card"/><g id="_x32_1_form"/><g id="_x32_0_headset"/><g id="_x31_9_video_call"/><g id="_x31_8_letter_box"/><g id="_x31_7_papperplane"><g><g>
                                                         <path d="M62.9891,2.5618c-0.0765-0.5779-0.6611-0.9805-1.2299-0.8401L7.4043,15.2065c-0.3535,0.0879-0.6318,0.3608-0.7256,0.7129     s0.0112,0.7275,0.2744,0.9795l13.9343,13.3583l-2.7649,17.1495c-0.1079,0.6712,0.4969,1.2576,1.1582,1.1445l18.0805-3.1324     l17.1832,9.6988c0.1523,0.0859,0.3218,0.1289,0.4917,0.1289c0.1523,0,0.3047-0.0347,0.4453-0.1045     c0.2969-0.1475,0.5015-0.4331,0.5459-0.7617l6.9639-51.5542C63.0031,2.7372,63.0007,2.6487,62.9891,2.5618z M9.647,16.7109     L56.8914,4.9902L22.2545,28.7978L9.647,16.7109z M36.9146,43.4663l-16.5942,2.875l2.4995-15.5054L58.8633,6.0615L36.9146,43.4663     z M54.2427,52.6504l-15.3231-8.6492l21.4231-36.509L54.2427,52.6504z"/><path d="M14.4438,51.6099l-4.6948,5.209c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6948-5.209c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C15.4463,51.1675,14.8135,51.2002,14.4438,51.6099z"/><path d="M5.9478,29.0562l-4.6909,5.2085c-0.3696,0.4106-0.3364,1.043,0.0742,1.4126c0.1909,0.1719,0.4302,0.2568,0.6685,0.2568     c0.2739,0,0.5459-0.1113,0.7437-0.3311l4.6909-5.2085c0.3696-0.4106,0.3364-1.043-0.0742-1.4126     C6.9487,28.6128,6.3179,28.6455,5.9478,29.0562z"/><path d="M40.8164,55.4331l-4.6909,5.2051c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6909-5.2051c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C41.8188,54.9907,41.186,55.0234,40.8164,55.4331z"/></g></g></g><g id="_x31_6_laptop"/><g id="_x31_5_connection"/><g id="_x31_4_phonebook"/><g id="_x31_3_classic_telephone"/><g id="_x31_2_sending_mail"/><g id="_x31_1_man_talking"/><g id="_x31_0_date"/><g id="_x30_9_review"/><g id="_x30_8_email"/><g id="_x30_7_information"/><g id="_x30_6_phone_talking"/><g id="_x30_5_women_talking"/><g id="_x30_4_calling"/><g id="_x30_3_women"/><g id="_x30_2_writing"/><g id="_x30_1_chatting"/>
                                                     </svg>                                                    
@@ -277,7 +277,7 @@
 
                                         <!-- item 3: buttons -->
                                         <div class="flex lg:flex-col xl:flex-row lg:space-x-0 lg:space-y-2 xl:space-x-2 xl:space-y-0 my-5">
-                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:bg-[color:rgba(var(--ni-gray-500))] hover:text-white rounded-lg duration-300">Cancel</button>
+                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:border-[color:rgba(var(--ni-danger-500))] hover:bg-[color:rgba(var(--ni-danger-500))] hover:text-white rounded-lg duration-300">Cancel</button>
                                             <button class="w-full p-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[rgba(var(--ni-primary-600))] text-white rounded-lg duration-300">Reply</button>
                                         </div>
                                     </div>
@@ -332,7 +332,7 @@
                                                 <input type="text" class="outline-none text-sm mr-auto px-5 w-full bg-[color:rgba(var(--ni-primary-100))] border border-[color:rgba(var(--ni-primary-200))] rounded-l-lg" placeholder="Type here...">
 
                                                 <!-- send text button -->
-                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-gray-400))] hover:bg-[color:rgba(var(--ni-gray-500))] fill-white rounded-r-lg duration-300">
+                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[color:rgba(var(--ni-primary-600))] fill-white rounded-r-lg duration-300">
                                                     <svg class="w-5 h-5" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_5_attachment"/><g id="_x32_4_office"/><g id="_x32_3_pin"/><g id="_x32_2_business_card"/><g id="_x32_1_form"/><g id="_x32_0_headset"/><g id="_x31_9_video_call"/><g id="_x31_8_letter_box"/><g id="_x31_7_papperplane"><g><g>
                                                         <path d="M62.9891,2.5618c-0.0765-0.5779-0.6611-0.9805-1.2299-0.8401L7.4043,15.2065c-0.3535,0.0879-0.6318,0.3608-0.7256,0.7129     s0.0112,0.7275,0.2744,0.9795l13.9343,13.3583l-2.7649,17.1495c-0.1079,0.6712,0.4969,1.2576,1.1582,1.1445l18.0805-3.1324     l17.1832,9.6988c0.1523,0.0859,0.3218,0.1289,0.4917,0.1289c0.1523,0,0.3047-0.0347,0.4453-0.1045     c0.2969-0.1475,0.5015-0.4331,0.5459-0.7617l6.9639-51.5542C63.0031,2.7372,63.0007,2.6487,62.9891,2.5618z M9.647,16.7109     L56.8914,4.9902L22.2545,28.7978L9.647,16.7109z M36.9146,43.4663l-16.5942,2.875l2.4995-15.5054L58.8633,6.0615L36.9146,43.4663     z M54.2427,52.6504l-15.3231-8.6492l21.4231-36.509L54.2427,52.6504z"/><path d="M14.4438,51.6099l-4.6948,5.209c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6948-5.209c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C15.4463,51.1675,14.8135,51.2002,14.4438,51.6099z"/><path d="M5.9478,29.0562l-4.6909,5.2085c-0.3696,0.4106-0.3364,1.043,0.0742,1.4126c0.1909,0.1719,0.4302,0.2568,0.6685,0.2568     c0.2739,0,0.5459-0.1113,0.7437-0.3311l4.6909-5.2085c0.3696-0.4106,0.3364-1.043-0.0742-1.4126     C6.9487,28.6128,6.3179,28.6455,5.9478,29.0562z"/><path d="M40.8164,55.4331l-4.6909,5.2051c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6909-5.2051c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C41.8188,54.9907,41.186,55.0234,40.8164,55.4331z"/></g></g></g><g id="_x31_6_laptop"/><g id="_x31_5_connection"/><g id="_x31_4_phonebook"/><g id="_x31_3_classic_telephone"/><g id="_x31_2_sending_mail"/><g id="_x31_1_man_talking"/><g id="_x31_0_date"/><g id="_x30_9_review"/><g id="_x30_8_email"/><g id="_x30_7_information"/><g id="_x30_6_phone_talking"/><g id="_x30_5_women_talking"/><g id="_x30_4_calling"/><g id="_x30_3_women"/><g id="_x30_2_writing"/><g id="_x30_1_chatting"/>
                                                     </svg>                                                    
@@ -385,7 +385,7 @@
 
                                         <!-- item 4: buttons -->
                                         <div class="flex lg:flex-col xl:flex-row lg:space-x-0 lg:space-y-2 xl:space-x-2 xl:space-y-0 my-5">
-                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:bg-[color:rgba(var(--ni-gray-500))] hover:text-white rounded-lg duration-300">Cancel</button>
+                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:border-[color:rgba(var(--ni-danger-500))] hover:bg-[color:rgba(var(--ni-danger-500))] hover:text-white rounded-lg duration-300">Cancel</button>
                                             <button class="w-full p-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[rgba(var(--ni-primary-600))] text-white rounded-lg duration-300">Reply</button>
                                         </div>
                                     </div>
@@ -440,7 +440,7 @@
                                                 <input type="text" class="outline-none text-sm mr-auto px-5 w-full bg-[color:rgba(var(--ni-primary-100))] border border-[color:rgba(var(--ni-primary-200))] rounded-l-lg" placeholder="Type here...">
 
                                                 <!-- send text button -->
-                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-gray-400))] hover:bg-[color:rgba(var(--ni-gray-500))] fill-white rounded-r-lg duration-300">
+                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[color:rgba(var(--ni-primary-600))] fill-white rounded-r-lg duration-300">
                                                     <svg class="w-5 h-5" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_5_attachment"/><g id="_x32_4_office"/><g id="_x32_3_pin"/><g id="_x32_2_business_card"/><g id="_x32_1_form"/><g id="_x32_0_headset"/><g id="_x31_9_video_call"/><g id="_x31_8_letter_box"/><g id="_x31_7_papperplane"><g><g>
                                                         <path d="M62.9891,2.5618c-0.0765-0.5779-0.6611-0.9805-1.2299-0.8401L7.4043,15.2065c-0.3535,0.0879-0.6318,0.3608-0.7256,0.7129     s0.0112,0.7275,0.2744,0.9795l13.9343,13.3583l-2.7649,17.1495c-0.1079,0.6712,0.4969,1.2576,1.1582,1.1445l18.0805-3.1324     l17.1832,9.6988c0.1523,0.0859,0.3218,0.1289,0.4917,0.1289c0.1523,0,0.3047-0.0347,0.4453-0.1045     c0.2969-0.1475,0.5015-0.4331,0.5459-0.7617l6.9639-51.5542C63.0031,2.7372,63.0007,2.6487,62.9891,2.5618z M9.647,16.7109     L56.8914,4.9902L22.2545,28.7978L9.647,16.7109z M36.9146,43.4663l-16.5942,2.875l2.4995-15.5054L58.8633,6.0615L36.9146,43.4663     z M54.2427,52.6504l-15.3231-8.6492l21.4231-36.509L54.2427,52.6504z"/><path d="M14.4438,51.6099l-4.6948,5.209c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6948-5.209c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C15.4463,51.1675,14.8135,51.2002,14.4438,51.6099z"/><path d="M5.9478,29.0562l-4.6909,5.2085c-0.3696,0.4106-0.3364,1.043,0.0742,1.4126c0.1909,0.1719,0.4302,0.2568,0.6685,0.2568     c0.2739,0,0.5459-0.1113,0.7437-0.3311l4.6909-5.2085c0.3696-0.4106,0.3364-1.043-0.0742-1.4126     C6.9487,28.6128,6.3179,28.6455,5.9478,29.0562z"/><path d="M40.8164,55.4331l-4.6909,5.2051c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6909-5.2051c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C41.8188,54.9907,41.186,55.0234,40.8164,55.4331z"/></g></g></g><g id="_x31_6_laptop"/><g id="_x31_5_connection"/><g id="_x31_4_phonebook"/><g id="_x31_3_classic_telephone"/><g id="_x31_2_sending_mail"/><g id="_x31_1_man_talking"/><g id="_x31_0_date"/><g id="_x30_9_review"/><g id="_x30_8_email"/><g id="_x30_7_information"/><g id="_x30_6_phone_talking"/><g id="_x30_5_women_talking"/><g id="_x30_4_calling"/><g id="_x30_3_women"/><g id="_x30_2_writing"/><g id="_x30_1_chatting"/>
                                                     </svg>                                                    
@@ -493,7 +493,7 @@
 
                                         <!-- item 5: buttons -->
                                         <div class="flex lg:flex-col xl:flex-row lg:space-x-0 lg:space-y-2 xl:space-x-2 xl:space-y-0 my-5">
-                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:bg-[color:rgba(var(--ni-gray-500))] hover:text-white rounded-lg duration-300">Cancel</button>
+                                            <button class="w-full p-2 border border-[color:rgba(var(--ni-gray-300))] hover:border-[color:rgba(var(--ni-danger-500))] hover:bg-[color:rgba(var(--ni-danger-500))] hover:text-white rounded-lg duration-300">Cancel</button>
                                             <button class="w-full p-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[rgba(var(--ni-primary-600))] text-white rounded-lg duration-300">Reply</button>
                                         </div>
                                     </div>
@@ -548,7 +548,7 @@
                                                 <input type="text" class="outline-none text-sm mr-auto px-5 w-full bg-[color:rgba(var(--ni-primary-100))] border border-[color:rgba(var(--ni-primary-200))] rounded-l-lg" placeholder="Type here...">
 
                                                 <!-- send text button -->
-                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-gray-400))] hover:bg-[color:rgba(var(--ni-gray-500))] fill-white rounded-r-lg duration-300">
+                                                <button class="outline outline-1 outline-[color:rgba(var(--ni-primary-200))] px-5 py-2 bg-[color:rgba(var(--ni-primary-500))] hover:bg-[color:rgba(var(--ni-primary-600))] fill-white rounded-r-lg duration-300">
                                                     <svg class="w-5 h-5" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x32_5_attachment"/><g id="_x32_4_office"/><g id="_x32_3_pin"/><g id="_x32_2_business_card"/><g id="_x32_1_form"/><g id="_x32_0_headset"/><g id="_x31_9_video_call"/><g id="_x31_8_letter_box"/><g id="_x31_7_papperplane"><g><g>
                                                         <path d="M62.9891,2.5618c-0.0765-0.5779-0.6611-0.9805-1.2299-0.8401L7.4043,15.2065c-0.3535,0.0879-0.6318,0.3608-0.7256,0.7129     s0.0112,0.7275,0.2744,0.9795l13.9343,13.3583l-2.7649,17.1495c-0.1079,0.6712,0.4969,1.2576,1.1582,1.1445l18.0805-3.1324     l17.1832,9.6988c0.1523,0.0859,0.3218,0.1289,0.4917,0.1289c0.1523,0,0.3047-0.0347,0.4453-0.1045     c0.2969-0.1475,0.5015-0.4331,0.5459-0.7617l6.9639-51.5542C63.0031,2.7372,63.0007,2.6487,62.9891,2.5618z M9.647,16.7109     L56.8914,4.9902L22.2545,28.7978L9.647,16.7109z M36.9146,43.4663l-16.5942,2.875l2.4995-15.5054L58.8633,6.0615L36.9146,43.4663     z M54.2427,52.6504l-15.3231-8.6492l21.4231-36.509L54.2427,52.6504z"/><path d="M14.4438,51.6099l-4.6948,5.209c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6948-5.209c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C15.4463,51.1675,14.8135,51.2002,14.4438,51.6099z"/><path d="M5.9478,29.0562l-4.6909,5.2085c-0.3696,0.4106-0.3364,1.043,0.0742,1.4126c0.1909,0.1719,0.4302,0.2568,0.6685,0.2568     c0.2739,0,0.5459-0.1113,0.7437-0.3311l4.6909-5.2085c0.3696-0.4106,0.3364-1.043-0.0742-1.4126     C6.9487,28.6128,6.3179,28.6455,5.9478,29.0562z"/><path d="M40.8164,55.4331l-4.6909,5.2051c-0.3701,0.4102-0.3369,1.0425,0.0732,1.4121c0.1909,0.1724,0.4307,0.2573,0.6689,0.2573     c0.2734,0,0.5459-0.1113,0.7432-0.3306l4.6909-5.2051c0.3701-0.4102,0.3369-1.0425-0.0732-1.4121     C41.8188,54.9907,41.186,55.0234,40.8164,55.4331z"/></g></g></g><g id="_x31_6_laptop"/><g id="_x31_5_connection"/><g id="_x31_4_phonebook"/><g id="_x31_3_classic_telephone"/><g id="_x31_2_sending_mail"/><g id="_x31_1_man_talking"/><g id="_x31_0_date"/><g id="_x30_9_review"/><g id="_x30_8_email"/><g id="_x30_7_information"/><g id="_x30_6_phone_talking"/><g id="_x30_5_women_talking"/><g id="_x30_4_calling"/><g id="_x30_3_women"/><g id="_x30_2_writing"/><g id="_x30_1_chatting"/>
                                                     </svg>                                                    
@@ -598,15 +598,14 @@
                 <div class="p-0 md:p-0 lg:p-10">
                     <div class="flex flex-col space-y-4 max-w-lg mx-auto">
 
-                        <!-- logo -->
-                        <div class="flex flex-row space-x-0 justify-center items-center font-bold text-md lg:text-xl mt-5">
-                            <span class="text-[color:rgba(var(--ni-danger-500))]">TURBO</span>
-                            <span class="text-[color:rgba(var(--ni-primary-500))]">TECH</span>
+                        <!-- logo image -->
+                        <div class="flex justify-center items-center mt-5">
+                            <img class="w-52 object-contain" src="https://www.turbotech.com/storages/assets/img/system/turbotech.png" alt="">
                         </div>
 
                         <!-- title & description -->
                         <div class="flex flex-col space-y-4 justify-center items-center">
-                            <div class="text-xl lg:text-2xl xl:text-3xl font-semibold">Create your account</div>
+                            <div class="text-xl lg:text-2xl font-semibold">Create your account</div>
                             <div class="text-xs sm:text-sm text-[color:rgba(var(--ni-gray-400))]">Enter the fields below to get started</div>
                         </div>
 
@@ -701,7 +700,7 @@
                             <div class="text-sm sm:text-md flex">
                                 <div class="text-[color:rgba(var(--ni-gray-400))]">Already have an account?</div>
                                 <div class="ml-2 font-semibold text-[color:rgba(var(--ni-primary-500))] hover:text-[color:rgba(var(--ni-primary-600))]">
-                                    <a href="#">Log in</a>
+                                    <a href="#" onclick="return false;">Log in</a>
                                 </div>
                             </div>
                         </form>
@@ -709,8 +708,8 @@
 
                     <!-- form footer -->
                     <div class="w-full font-medium text-md text-[color:rgba(var(--ni-gray-400))] flex mt-20 lg:mt-40">
-                        <a href="#" class="hover:text-[color:rgba(var(--ni-primary-500))]">@2022 Stratis</a>
-                        <a href="#" class="ml-auto hover:text-[color:rgba(var(--ni-primary-500))]">Privacy Policy</a>
+                        <a href="#" onclick="return false;" class="hover:text-[color:rgba(var(--ni-primary-500))]">@2022 Stratis</a>
+                        <a href="#" onclick="return false;" class="ml-auto hover:text-[color:rgba(var(--ni-primary-500))]">Privacy Policy</a>
                     </div>
                 </div>
             </div>
@@ -727,8 +726,221 @@
 
 <script>
 
+    // Classic Split Login and Carousel Slide function
+    const classicSplitLoginAndCarouselSlide = () => {
+
+        const splitLoginAndCarousel = $("#split-login-and-carousel");
+        const inputs                = $("#split-login-and-carousel div input");
+        const inputDefault          = ("border border-[color:rgba(var(--ni-primary-200))]");
+        const inputError            = ("border border-[color:rgba(var(--ni-danger-300))]");
+        const messageClass          = ("text-sm text-[color:rgba(var(--ni-danger-500))]");
+
+        // validation
+        splitLoginAndCarousel.validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 8
+                }
+            },
+
+            // error messages
+            messages: {
+                name: "Please enter your name",
+                email: {
+                    required: "Please enter your email",
+                    email:"Enter a valid email or phone number"
+                },
+                password: {
+                    required: "Please enter your password",
+                    minlength: "Passwords must be at least 8 characters"
+                }
+            },
+
+            submitHandler: function(form) {
+                form.submit();
+            },
+
+            // custom error message styles
+            errorPlacement: function(error, element) {
+                element.removeClass(inputDefault);
+                element.addClass(inputError);
+
+                error.addClass(messageClass);
+                error.css("margin-top", "0px"); 
+                error.insertAfter(element); 
+            },
+
+            // success
+            success: function(error) {             
+                
+                inputs.each(function() {
+                    $(this).removeClass(inputError);
+                    $(this).addClass(inputDefault);
+                });
+
+                // remove error messages
+                error.remove();
+            }
+        });
+
+        $(document).ready(function() {
+
+            const password = $("#password");
+
+            // SVG icon styles
+            const svgDefault = ("fill-[color:rgba(var(--ni-gray-300))]"),
+                    svgSuccess = ("fill-[color:rgba(var(--ni-greengray-500))]");
+
+            // text styles
+            const textDefault = ("text-[color:rgba(var(--ni-gray-400))]"),
+                    textSuccess = ("text-[color:rgba(var(--ni-greengray-500))]");
+            
+            // lowercase items
+            const lowercaseIcon = $("#required-password div:first-child svg"),
+                    lowerCaseChar = $("#required-password div:first-child div");
+
+            // special items
+            const specialIcon = $("#required-password div:nth-child(2) svg"),
+                    specialChar = $("#required-password div:nth-child(2) div");
+
+            // uppercase items
+            const uppercaseIcon = $("#required-password div:nth-child(3) svg"),
+                    upperCaseChar = $("#required-password div:nth-child(3) div");
+
+            // minimun items
+            const minimumIcon = $("#required-password div:nth-child(4) svg"),
+                    minimunChar = $("#required-password div:nth-child(4) div");
+
+            // minimun items
+            const numberIcon = $("#required-password div:last-child svg"),
+                    numberChar = $("#required-password div:last-child div");
+
+            // match password function
+            const matchPassword = () => {
+                
+                password.on("keyup", function() {
+
+                    const passwords    = password.val();
+                    const eachPassword = true;
+
+                    // compare regex
+                    const lowercase = passwords.match(/[a-z]/),
+                            special   = passwords.match(/[!@#$%&*?]/);
+                            uppercase = passwords.match(/[A-Z]/),
+                            number    = passwords.match(/[0-9]/);
+
+                    // lowercase condition
+                    if ( lowercase ) {
+
+                        lowercaseIcon.removeClass(svgDefault);
+                        lowerCaseChar.removeClass(textDefault);
+                        
+                        lowercaseIcon.addClass(svgSuccess);
+                        lowerCaseChar.addClass(textSuccess);
+
+                    } else {
+
+                        lowercaseIcon.addClass(svgDefault);
+                        lowerCaseChar.addClass(textDefault);
+
+                        lowercaseIcon.removeClass(svgSuccess);
+                        lowerCaseChar.removeClass(textSuccess);
+
+                    }
+
+                    // one special character condition
+                    if ( special ) {
+                        
+                        specialIcon.removeClass(svgDefault);
+                        specialChar.removeClass(textDefault);
+                        
+                        specialIcon.addClass(svgSuccess);
+                        specialChar.addClass(textSuccess);
+
+                    } else {
+
+                        specialIcon.addClass(svgDefault);
+                        specialChar.addClass(textDefault);
+
+                        specialIcon.removeClass(svgSuccess);
+                        specialChar.removeClass(textSuccess);
+
+                    }
+
+                    // uppercase condition
+                    if ( uppercase ) {
+
+                        uppercaseIcon.removeClass(svgDefault);
+                        upperCaseChar.removeClass(textDefault);
+
+                        uppercaseIcon.addClass(svgSuccess);
+                        upperCaseChar.addClass(textSuccess);
+
+                    } else {
+
+                        uppercaseIcon.addClass(svgDefault);
+                        upperCaseChar.addClass(textDefault);
+
+                        uppercaseIcon.removeClass(svgSuccess);
+                        upperCaseChar.removeClass(textSuccess);
+
+                    }
+
+                    // 8 minimum condition
+                    if ( passwords.length >= 8 ) {
+
+                        minimumIcon.removeClass(svgDefault);
+                        minimunChar.removeClass(textDefault);
+
+                        minimumIcon.addClass(svgSuccess);
+                        minimunChar.addClass(textSuccess);
+
+                    } else {
+
+                        minimumIcon.addClass(svgDefault);
+                        minimunChar.addClass(textDefault);
+
+                        minimumIcon.removeClass(svgSuccess);
+                        minimunChar.removeClass(textSuccess);
+                    }
+
+                    // one special character condition
+                    if ( number ) {
+                        
+                        numberIcon.removeClass(svgDefault);
+                        numberChar.removeClass(textDefault);
+                        
+                        numberIcon.addClass(svgSuccess);
+                        numberChar.addClass(textSuccess);
+
+                    } else {
+
+                        numberIcon.addClass(svgDefault);
+                        numberChar.addClass(textDefault);
+
+                        numberIcon.removeClass(svgSuccess);
+                        numberChar.removeClass(textSuccess);
+
+                    }
+                });
+            }
+
+            // call match password function
+            matchPassword();
+
+        });
+
+    }
+
     // call function
     classicSplitLoginAndCarouselSlide();
 
 </script>
+
 @endsection
