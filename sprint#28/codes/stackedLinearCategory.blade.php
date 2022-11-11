@@ -9,10 +9,10 @@
 
 <!-- main -->
 <div class="mainCard">
-    <ul class="cardContainer grid-cols-1">
-        <li class="eachCard px-0 py-2 pr-2 mt-5 sm:mt-0 rounded-xl">
+    <ul class="cardContainer flex justify-center items-center">
+        <li class="eachCard w-full lg:w-[70%] xl:w-[60%] 2xl:w-[50%] h-auto px-0 py-2 pr-2 mt-5 sm:mt-0 rounded-xl">
             <div class="p-0 sm:p-2 md:p-5">
-                <canvas id="stacked-linear-category" class="min-h-min w-full sm:min-h-[20rem]"></canvas>
+                <canvas id="stacked-linear-category" class="min-h-min sm:min-h-[20rem]"></canvas>
             </div>
         </li>
     </ul>
@@ -32,6 +32,7 @@
         // Stacked Linear / Category config
         const stackedLinearCategoryConfig = {
 
+            maintainAspectRatio: false, // true: graph size bigger
             responsive: true,
             plugins: {
                 title: {
