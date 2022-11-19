@@ -60,7 +60,7 @@
             const lowercaseVal = defaultInputVal.toString().toLowerCase();
 
             // regex for spaces, dashes, and underscore => single dash
-            result = lowercaseVal.replace(/(?:\s*-\s*)+|\_{1,}|\s{1,}/g, "-")
+            result = lowercaseVal.replace(/(?:\s*-\s*)+|(?:\s*_\s*)+/g, "-")
 
             // regex for special chars => none
             .replace(/[`~!@#$%^&*?()=+{}:;""'',<>?]|\/{1,}|\\{1,}|\[{1,}|\]{1,}|\|{1,}/g, "");
