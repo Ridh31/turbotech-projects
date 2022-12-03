@@ -44,9 +44,9 @@
                             <div id="date" class="text-xs sm:text-sm text-[color:rgba(var(--ni-gray-400))] flex items-end">Nov 29, 2022 at 12:00 PM</div>
                         </div>
 
-                        <!-- message box -->
-                        <div class="flex w-full px-5 py-3 bg-white shadow-md rounded-3xl">
-                            <div id="messages" class="text-[color:rgba(var(--ni-gray-500))]">Hi, welcome to SimpleChat! Go ahead and send me a message. 😄</div>
+                        <!-- comment box -->
+                        <div class="flex justify-start items-start">
+                            <div id="messages" class="px-5 py-3 bg-white text-[color:rgba(var(--ni-gray-500))] shadow-md rounded-3xl">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
                         </div>
 
                         <div class="relative flex gap-2">
@@ -98,8 +98,8 @@
                         </div>
     
                         <!-- comment box -->
-                        <div class="flex w-full p-3 bg-white shadow-md rounded-md">
-                            <div id="messages" class="text-[color:rgba(var(--ni-gray-500))]">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
+                        <div class="flex justify-start items-start">
+                            <div id="messages" class="p-3 bg-white text-[color:rgba(var(--ni-gray-500))] shadow-md rounded-md">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
                         </div>
     
                         <!-- reply -->

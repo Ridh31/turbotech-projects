@@ -46,10 +46,10 @@
                                 <!-- sent date -->
                                 <div id="date" class="text-xs sm:text-sm text-[color:rgba(var(--ni-gray-400))] flex items-end">Nov 30, 2022 at 12:00 PM</div>
                             </div>
-            
-                            <!-- message box -->
-                            <div class="flex w-full p-3 bg-white shadow-md rounded-md">
-                                <div id="messages" class="text-[color:rgba(var(--ni-gray-500))]">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
+
+                            <!-- comment box -->
+                            <div class="flex justify-start items-start">
+                                <div id="messages" class="p-3 bg-white text-[color:rgba(var(--ni-gray-500))] shadow-md rounded-md">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
                             </div>
                         </div>
                         
@@ -120,9 +120,9 @@
                                 <div id="date" class="text-xs sm:text-sm text-[color:rgba(var(--ni-gray-400))] flex items-end">Nov 30, 2022 at 12:00 PM</div>
                             </div>
             
-                            <!-- message box -->
-                            <div class="flex w-full p-3 bg-white shadow-md rounded-md">
-                                <div id="messages" class="text-[color:rgba(var(--ni-gray-500))]">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
+                            <!-- comment box -->
+                            <div class="flex justify-start items-start">
+                                <div id="messages" class="p-3 bg-white text-[color:rgba(var(--ni-gray-500))] shadow-md rounded-md">Hi, welcome to SimpleComment! Go ahead and send me a comment. 😄</div>
                             </div>
 
                             <!-- reply -->
