@@ -92,13 +92,13 @@ class previewServerRequestFormController extends Controller {
 
                             <tr>
                                 <td>
-                                    <div style="color: black; font-size: 24px; font-family: khmerosmoullight;"> ក្រុមហ៊ុន ធើបូថេក ឯ.ក </div>
+                                    <div style="font-size: 24px; font-family: khmerosmoullight;"> ក្រុមហ៊ុន ធើបូថេក ឯ.ក </div>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td style="text-align: center;">
-                                    <div style="color: black; font-size: 20px; font-family: khmerosmoullight; margin-left: 30px;"> TURBOTECH CO.,LTD </div>
+                                    <div style="font-size: 20px; font-family: khmerosmoullight; margin-left: 30px;"> TURBOTECH CO.,LTD </div>
                                 </td>
                             </tr>
                         </table>
@@ -114,9 +114,9 @@ class previewServerRequestFormController extends Controller {
         */
         $formSubject = '
 
-            <div class="row"><br>
+            <div><br>
                 <div align="center">
-                    <div style="text-align: center; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> SERVER REQUEST FORM </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> SERVER REQUEST FORM </div>
                 </div>
             </div>
         ';
@@ -128,50 +128,50 @@ class previewServerRequestFormController extends Controller {
         */
         $requestersInformation = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
                 <div align="center">
-                    <div style="text-align: center; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> Requesters Information </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> Requesters Information </div>
                 </div>
             </div><br>
 
             <table border="0">
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 0px 0px 0px 0px;">
-                        <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Name: </span>
-                        <span>_________________________________________________________</span>
+                    <td colspan="2" style="font-size: 14px;">
+                        <span> Name:&thinsp; </span>
+                        <span>_____________________________________________________________</span>
         
-                        <span> Date: </span>
+                        <span> Date:&thinsp; </span>
                         <span>_______________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 0px;">
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 0px;">
                         <span> Department: </span>
-                        <span>______________________________________________</span>
-        
-                        <span> Title: </span>
-                        <span>____________________________________</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 0px;">
-                        <span> Email Address: </span>
                         <span>__________________________________________________</span>
         
-                        <span> Phone: </span>
-                        <span>____________________________</span>
+                        <span> Title: </span>
+                        <span>_____________________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 0px;">
-                        <span> Line Manager: </span>
-                        <span>__________________________________________</span>
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 0px;">
+                        <span> Email Address: </span>
+                        <span>______________________________________________________</span>
+        
+                        <span> Phone: </span>
+                        <span>_____________________________</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 0px;">
+                        <span> Line Manager:&thinsp; </span>
+                        <span>______________________________________________</span>
         
                         <span> Line Manager Phone: </span>
-                        <span>_____________________</span>
+                        <span>______________________</span>
                     </td>
                 </tr>
             </table>
@@ -184,46 +184,46 @@ class previewServerRequestFormController extends Controller {
         */
         $serverInformation = '
 
-            <div class="row"><br>
+            <div><br>
                 <div align="center">
-                    <div style="text-align: center; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> Server Information </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> Server Information </div>
                 </div>
-            </div>
+            </div><br>
 
             <table border="0">
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 4px 0px 0px 0px;">
+                    <td colspan="2" style="font-size: 14px;">
                         <span> Type of server (check all that apply): </span>
                     </td>
 
-                    <td colspan="2" style="text-align: left; padding: 1px 0px 0px 50px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> Application Server </span>
+                    <td colspan="2" style="padding: 0px 0px 0px 35px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> Application Server </span>
                     </td>
 
-                    <td colspan="2" style="text-align: left; padding: 1px 0px 0px -40px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> Database Server </span>
+                    <td colspan="1" style="padding: 0px 0px 0px 25px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> Database Server </span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td style="text-align: left; padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> File Server </span>
+                    <td style="padding: 10px 0px 0px 0px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> File Server </span>
                     </td>
 
-                    <td style="text-align: left; padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> Web Server </span>
+                    <td style="padding: 10px 0px 0px 35px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> Web Server </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> FTP Server </span>
+                    <td colspan="1" style="padding: 10px 0px 0px 35px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> FTP Server </span>
                     </td>
 
-                    <td colspan="2" style="text-align: left; padding: 14px 0px 0px -20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 14px 0px 0px 0px;">
                         <span> Others: </span>
                         <span>____________________________________</span>
                     </td>
@@ -240,23 +240,23 @@ class previewServerRequestFormController extends Controller {
 
             <table border="0">
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 4px 0px 0px 0px;">
+                    <td colspan="2" style="font-size: 14px; padding: 4px 0px 0px 0px;">
                         <span style="font-weight: bold;"> Environment </span>
                         <span> (check only one): </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 0px 0px 0px 50px;">
-                        <span style="font-size: 20px;"> ◻ </span>
+                    <td colspan="1" style="font-size: 14px; padding: 0px 0px 0px 50px;">
+                        <span style="font-size: 16px;"> ◻ </span>
                         <span style="font-weight: bold;"> Production </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 0px 0px 0px 50px;">
-                        <span style="font-size: 20px;"> ◻ </span>
+                    <td colspan="1" style="font-size: 14px; padding: 0px 0px 0px 50px;">
+                        <span style="font-size: 16px;"> ◻ </span>
                         <span style="font-weight: bold;"> UAT </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 0px 0px 0px 50px;">
-                        <span style="font-size: 20px;"> ◻ </span>
+                    <td colspan="1" style="font-size: 14px; padding: 0px 0px 0px 50px;">
+                        <span style="font-size: 16px;"> ◻ </span>
                         <span style="font-weight: bold;"> Development </span>
                     </td>
                 </tr>
@@ -270,45 +270,45 @@ class previewServerRequestFormController extends Controller {
         */
         $applicationAdministrator = '
 
-            <div class="row"><br>
+            <div><br>
                 <div align="left">
-                    <span style="text-align: left; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> Application administrator </span>
+                    <span style="font-size: 14px; font-weight: bold;"> Application administrator </span>
                     <span style="font-size: 13.7px;"> (individual development responsible for maintaining the application software): </span>
                 </div>
             </div>
 
-            <div class="row"><br>
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Name: </span>
-                <span>_________________________________________</span>
+            <div style="font-size: 14px;"><br>
+                <span> Name: </span>
+                <span>___________________________________________</span>
 
                 <span> Phone: </span>
-                <span>______________________________________________</span>
+                <span>_________________________________________________</span>
             </div><br>
 
             <table border="0">
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 4px 0px 10px 30px;">
+                    <td colspan="2" style="font-size: 14px; padding: 0px 0px 10px 45px;">
                         <span> Will remote access request be required? </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 1px 0px 10px 10px;">
-                        <span style="font-size: 20px;"> ◻ </span>
+                    <td colspan="1" style="font-size: 14px; padding: 0px 0px 10px 10px;">
+                        <span style="font-size: 16px;"> ◻ </span>
                         <span> NO </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 1px 0px 10px 10px;">
-                        <span style="font-size: 20px;"> ◻ </span>
+                    <td colspan="1" style="font-size: 14px; padding: 0px 0px 10px 10px;">
+                        <span style="font-size: 16px;"> ◻ </span>
                         <span> YES </span>
                     </td>
 
-                    <td colspan="1" style="text-align: left; padding: 4px 0px 10px 0px;">
+                    <td colspan="1" style="font-size: 14px; padding: 0px 0px 10px 0px;">
                         <span> please list SSH or Remote Desktop: </span>
                     </td>
                 </tr>
             </table>
 
-            <div class="row">
-                <span>_______________________________________________________________________________________________________</span>
+            <div style="text-align: right; font-size: 14px;">
+                <span>__________________________________________________________________________________________________________</span>
             </div>
         ';
 
@@ -319,76 +319,76 @@ class previewServerRequestFormController extends Controller {
         */
         $systemRequirements = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
                 <div align="center">
-                    <div style="text-align: center; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> System Requirements </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> System Requirements </div>
                 </div>
-            </div>
+            </div><br>
 
             <table border="0">
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 4px 0px 0px 0px;">
+                    <td colspan="2" style="font-size: 14px;">
                         <span style="font-weight: bold;"> Check one: </span>
                     </td>
 
-                    <td colspan="2" style="text-align: left; padding: 1px 0px 0px 50px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> Virtual Machine </span>
+                    <td colspan="2" style="padding: 0px 0px 0px 50px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> Virtual Machine </span>
                     </td>
 
-                    <td colspan="2" style="text-align: left; padding: 1px 0px 0px 50px;">
-                        <span style="font-size: 20px;"> ◻ </span>
-                        <span> Physical Server </span>
+                    <td colspan="2" style="padding: 0px 0px 0px 50px;">
+                        <span style="font-size: 16px;"> ◻ </span>
+                        <span style="font-size: 14px;"> Physical Server </span>
                     </td>
                 </tr>
             </table><br>
 
             <table border="0">
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 0px 0px 0px 20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 0px 0px 0px 20px;">
                         <span> a. &nbsp; </span>
                         <span> Server name: </span>
-                        <span>_________________________________________________________________________________</span>
+                        <span>______________________________________________________________________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 20px;">
                         <span> b. &nbsp; </span>
-                        <span> Operating System: </span>
-                        <span>____________________________________________________________________________</span>
+                        <span> Operating System:&thinsp; </span>
+                        <span>________________________________________________________________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 20px;">
                         <span> c. &nbsp; </span>
-                        <span> Number of CPU&#39;s Core: </span>
-                        <span>_______________________________________________________________________</span>
+                        <span> Number of CPU&#39;s Core:&thinsp; </span>
+                        <span>&thinsp;___________________________________________________________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 20px;">
                         <span> d. &nbsp; </span>
-                        <span> Memory: </span>
-                        <span>_____________________________________________________________________________________</span>
+                        <span> Memory:&thinsp; </span>
+                        <span>__________________________________________________________________________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 20px;">
                         <span> e. &nbsp; </span>
-                        <span> Disk size for operating system: </span>
-                        <span>_______________________________________________________________</span>
+                        <span> Disk size for operating system:&thinsp; </span>
+                        <span>____________________________________________________________________</span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="2" style="text-align: left; padding: 10px 0px 0px 20px;">
+                    <td colspan="2" style="font-size: 14px; padding: 10px 0px 0px 20px;">
                         <span> f. &nbsp; </span>
-                        <span> Storage requirement for application/data: </span>
-                        <span>____________________________________________________</span>
+                        <span> &thinsp;Storage requirement for application/data: </span>
+                        <span>_________________________________________________________</span>
                     </td>
                 </tr>
             </table>
@@ -401,18 +401,18 @@ class previewServerRequestFormController extends Controller {
         */
         $networkInformation = '
 
-            <div class="row"><br>
+            <div><br>
                 <div align="center">
-                    <div style="text-align: center; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> Network Information </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> Network Information </div>
                 </div>
             </div>
 
-            <div class="row"><br>
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Private IP: </span>
-                <span>___________________________________________</span>
+            <div style="font-size: 14px;"><br>
+                <span> Private IP: </span>
+                <span>_____________________________________________</span>
 
                 <span> Public IP: </span>
-                <span>______________________________________</span>
+                <span>________________________________________</span>
             </div>
         ';
 
@@ -425,8 +425,8 @@ class previewServerRequestFormController extends Controller {
             
             <table border="0" align="right">
                 <tr>
-                    <td style="padding: 20px 0px 0px 20px;">
-                        <div style="color: black; font-size: 12px;"> TT-ITD-SRP-FM-004 </div>
+                    <td style="padding: 39px -8px 0px 20px;">
+                        <div style="font-size: 12px;"> TT-ITD-SRP-FM-004 </div>
                     </td>
                 </tr>
             </table>

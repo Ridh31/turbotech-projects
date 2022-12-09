@@ -9,9 +9,9 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\util;
 use App\Http\Controllers\previewTableListController;
 
-class previewUserRequestFormController extends Controller {
+class previewDataCenterEquipmentPlacementRequestController extends Controller {
 
-    public static function userRequestFormPreview() {
+    public static function dataCenterEquipmentPlacementRequestPreview() {
 
         $defaultConfig      = (new \Mpdf\Config\ConfigVariables())->getDefaults();
         $fontDirs           = $defaultConfig["fontDir"];
@@ -65,14 +65,14 @@ class previewUserRequestFormController extends Controller {
         ];
 
         $mpdf     = new \Mpdf\Mpdf($config);
-        $html     = self::userRequestFormPreviewPDF();
-        $formName = "User Request Form";
+        $html     = self::dataCenterEquipmentPlacementRequestPreviewPDF();
+        $formName = "Data Center Equipment Placement Request";
         $mpdf -> SetTitle($formName);
         $mpdf -> WriteHTML($html);
         $mpdf -> Output();
     }
 
-    public static function userRequestFormPreviewPDF() {
+    public static function dataCenterEquipmentPlacementRequestPreviewPDF() {
 
        /*
         *--------------------------------------------------------------------------
@@ -83,6 +83,7 @@ class previewUserRequestFormController extends Controller {
 
             <table border="0">
                 <tr>
+
                     <td style="padding: 0px 0px 0px 100px;">
                         <img style="width: 130px;" src="images/logo.png">
                     </td>
@@ -118,137 +119,57 @@ class previewUserRequestFormController extends Controller {
 
             <div><br>
                 <div align="center">
-                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> USER REQUEST FORM </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> DATA CENTER EQUIPMENT PLACEMENT REQUEST </div>
                 </div>
-            </div>
-        ';
-
-       /*
-        *--------------------------------------------------------------------------
-        * user name, gender, etc ...
-        *--------------------------------------------------------------------------
-        */
-        $userDetails = '
-
-            <div style="font-size: 14px;"><br>
-
-                <span style="font-size: 14px;"> User&#39;s name: </span>
-                <span>__________________________________</span>
-
-                <span> Sex: </span>
-                <span>_______________</span>
-
-                <span> Mobile: </span>
-                <span>______________________________</span>
-            </div>
-
-            <div style="font-size: 14px;"><br>
-                <span> Position: </span>
-                <span>__________________________________________________________________________________________________</span>
-            </div>
-
-            <div style="font-size: 14px;"><br>
-                <span> Department: </span>
-                <span>______________________________________________________________________________________________</span>
-            </div>
-        ';
-
-       /*
-        *--------------------------------------------------------------------------
-        * object request/action ➤ checkboxes
-        *--------------------------------------------------------------------------
-        */
-        $objectRequest = '
-
-            <div style="font-size: 14px;"><br>
-                <div> Object Request/Action: </div>
             </div><br>
+        ';
 
-            <table border="0">
+       /*
+        *--------------------------------------------------------------------------
+        * requestor & office & department & description & approved by
+        *--------------------------------------------------------------------------
+        */
+        $content = '
+        
+            <table border="0" style="border-collapse: collapse;">
                 <tr>
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Add new </span>
+                    <td colspan="1" style="padding: 0px 295px 0px 0px;">
                     </td>
 
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Change </span>
-                    </td>
-
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Delete </span>
-                    </td>
-
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Others </span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td style="padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> User in system </span>
-                    </td>
-
-                    <td style="padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Chart Account </span>
-                    </td>
-
-                    <td colspan="2" style="padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Computer problem solving </span>
+                    <td colspan="1" style="font-size: 14px;">
+                        <span> Requested Date: </span>
+                        <span>___________________________________________</span>
                     </td>
                 </tr>
             </table>
 
             <div style="font-size: 14px;"><br>
-                <span> Others: </span>
-                <span>___________________________________________________________________________________________________</span>
+                <span> Requestor Name: </span>
+                <span>_________________________________________________________________________________________</span>
             </div>
 
             <div style="font-size: 14px;"><br>
-                <span> Problem or Upgrade: </span>
-                <span>_____________________________________________________________________________________</span><br><br>
-                <span>___________________________________________________________________________________________________________</span>
-            </div>
-        ';
-
-       /*
-        *--------------------------------------------------------------------------
-        * request to department
-        *--------------------------------------------------------------------------
-        */
-        $requestToDepartment = '
-
-            <div style="font-size: 14px;"><br>
-                <div> Request to department: </div>
-            </div><br>
-
-            <div style="font-size: 14px;">
-
-                <span style="font-size: 14px;"> Date requested: </span>
-                <span>_________________________</span>
-
-                <span> Requested by (Sign & name): </span>
-                <span>__________________________________</span>
+                <span> Requestor Email: </span>
+                <span>_________________________________________________________________________________________</span>
             </div>
 
             <div style="font-size: 14px;"><br>
-                <span> Approved by (Sign & name): </span>
-                <span>_____________________________________</span>
+                <span> Office/Daytime Phone: </span>
+                <span>____________________________________________________________________________________</span>
+            </div>
+
+            <div style="font-size: 14px;"><br>
+                <span> Department/Company/Suppliers: </span>
+                <span>&thinsp;_________________________________________________________________________</span>
             </div>
 
             <div style="font-size: 14px;"><br>
 
-                <span style="font-size: 14px;"> Date received: </span>
-                <span>___________________________</span>
+                <span> Approved by: </span>
+                <span>&thinsp;_________________________________________</span>
 
-                <span> Received by (Sign & name): </span>
-                <span>___________________________________</span>
+                <span> Date: </span>
+                <span>&thinsp;_____________________________________________</span>
             </div>
         ';
 
@@ -261,14 +182,14 @@ class previewUserRequestFormController extends Controller {
             
             <table border="0" align="right">
                 <tr>
-                    <td style="padding: 328px -8px 0px 20px;">
-                        <div style="font-size: 12px;"> TT-ITD-UAMP-FM-001 </div>
+                    <td style="padding: 586.5px -8px 0px 20px;">
+                        <div style="font-size: 12px;"> TT-ITD-DCP-FM-005 </div>
                     </td>
                 </tr>
             </table>
         ';
 
         // return
-        return $companyLogo .$formSubject .$userDetails .$objectRequest .$requestToDepartment .$formId;
+        return $companyLogo .$formSubject .$content .$formId;
     }
 }

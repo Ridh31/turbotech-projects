@@ -162,8 +162,8 @@
         
                                 <!-- other -->
                                 <div class="col-span-2 md:col-span-1 flex items-center gap-2">
-                                    <input type="checkbox" name="other" id="other" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
-                                    <label for="other" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Other</label>
+                                    <input type="checkbox" name="othersCheckbox" id="othersCheckbox" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
+                                    <label for="othersCheckbox" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Others</label>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                 <!-- others -->
                 <div class="col-span-2">
                     <h3 class="font-medium dark:text-white font-content">Others</h3>
-                    <input type="text" name="others" id="others" value="" class="formInput mt-2" placeholder="Others" required>
+                    <input type="text" name="othersInput" id="othersInput" value="" class="formInput mt-2" placeholder="Others" required>
                 </div>
 
                 <!-- environment -->

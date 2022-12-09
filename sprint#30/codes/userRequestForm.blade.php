@@ -133,27 +133,27 @@
                             <div class="grid grid-cols-4 gap-2 w-full">
 
                                 <!-- add new -->
-                                <div class="col-span-2 md:col-span-1 flex items-center gap-2">
+                                <div class="col-span-8 sm:col-span-2 md:col-span-1 flex items-center gap-2">
                                     <input type="checkbox" name="addNew" id="addNew" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
                                     <label for="addNew" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Add new</label>
                                 </div>
 
                                 <!-- change -->
-                                <div class="col-span-2 md:col-span-1 flex items-center gap-2">
+                                <div class="col-span-8 sm:col-span-2 md:col-span-1 flex items-center gap-2">
                                     <input type="checkbox" name="change" id="change" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
                                     <label for="change" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Change</label>
                                 </div>
 
                                 <!-- delete -->
-                                <div class="col-span-2 md:col-span-1 flex items-center gap-2">
+                                <div class="col-span-8 sm:col-span-2 md:col-span-1 flex items-center gap-2">
                                     <input type="checkbox" name="delete" id="delete" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
                                     <label for="delete" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Delete</label>
                                 </div>
 
-                                <!-- other -->
-                                <div class="col-span-2 md:col-span-1 flex items-center gap-2">
-                                    <input type="checkbox" name="other" id="other" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
-                                    <label for="other" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Other</label>
+                                <!-- others -->
+                                <div class="col-span-8 sm:col-span-2 md:col-span-1 flex items-center gap-2">
+                                    <input type="checkbox" name="othersCheckbox" id="othersCheckbox" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
+                                    <label for="othersCheckbox" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Others</label>
                                 </div>
                             </div>
 
@@ -161,19 +161,19 @@
                             <div class="grid grid-cols-4 gap-2 w-full">
 
                                 <!-- user in system -->
-                                <div class="col-span-2 md:col-span-1 flex items-center gap-2">
+                                <div class="col-span-6 sm:col-span-2 md:col-span-1 flex items-center gap-2">
                                     <input type="checkbox" name="userInSystem" id="userInSystem" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
                                     <label for="userInSystem" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">User in system</label>
                                 </div>
 
                                 <!-- chart account -->
-                                <div class="col-span-2 md:col-span-1 flex items-center gap-2">
+                                <div class="col-span-6 sm:col-span-2 md:col-span-1 flex items-center gap-2">
                                     <input type="checkbox" name="chartAccount" id="chartAccount" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
                                     <label for="chartAccount" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Chart Account</label>
                                 </div>
 
                                 <!-- computer problem solving -->
-                                <div class="col-span-4 md:col-span-2 flex items-center gap-2">
+                                <div class="col-span-6 sm:col-span-4 md:col-span-2 flex items-center gap-2">
                                     <input type="checkbox" name="computerProblemSolving" id="computerProblemSolving" class="w-4 h-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 rounded">
                                     <label for="computerProblemSolving" class="cursor-pointer select-none mt-1 font-medium text-sm dark:bg-gray-800 dark:text-gray-100">Computer problem solving</label>
                                 </div>
@@ -185,7 +185,7 @@
                 <!-- others -->
                 <div class="col-span-2">
                     <h3 class="font-medium dark:text-white font-content">Others</h3>
-                    <input type="text" name="others" id="others" value="" class="formInput mt-2" placeholder="Others" required>
+                    <input type="text" name="othersInput" id="othersInput" value="" class="formInput mt-2" placeholder="Others" required>
                 </div>
 
                 <!-- problem or upgrade -->

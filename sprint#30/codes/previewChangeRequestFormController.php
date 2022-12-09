@@ -92,13 +92,13 @@ class previewChangeRequestFormController extends Controller {
 
                             <tr>
                                 <td>
-                                    <div style="color: black; font-size: 24px; font-family: khmerosmoullight;"> ក្រុមហ៊ុន ធើបូថេក ឯ.ក </div>
+                                    <div style="font-size: 24px; font-family: khmerosmoullight;"> ក្រុមហ៊ុន ធើបូថេក ឯ.ក </div>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td style="text-align: center;">
-                                    <div style="color: black; font-size: 20px; font-family: khmerosmoullight; margin-left: 30px;"> TURBOTECH CO.,LTD </div>
+                                    <div style="font-size: 20px; font-family: khmerosmoullight; margin-left: 30px;"> TURBOTECH CO.,LTD </div>
                                 </td>
                             </tr>
                         </table>
@@ -116,9 +116,9 @@ class previewChangeRequestFormController extends Controller {
         */
         $formSubject = '
 
-            <div class="row"><br>
+            <div><br>
                 <div align="center">
-                    <div style="text-align: center; color: black; font-size: 14px; font-weight: bold; margin: 0px; padding: 2px;"> CHANGE REQUEST FORM </div>
+                    <div style="text-align: center; font-size: 14px; font-weight: bold;"> CHANGE REQUEST FORM </div>
                 </div>
             </div>
         ';
@@ -130,26 +130,26 @@ class previewChangeRequestFormController extends Controller {
         */
         $userDetails = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">1. </span>
 
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Name&#39;s Request: </span>
-                <span>______________________________</span>
+                <span> Name&#39;s Request: </span>
+                <span>_____________________________</span>
 
                 <span> Sex: </span>
-                <span>___________</span>
+                <span>___________&thinsp;</span>
 
                 <span> Position: </span>
-                <span>__________________________</span>
+                <span>_______________________________</span>
             </div>
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">2. </span>
 
                 <span> Department/Branch Name: </span>
-                <span>________________________________________________________________________</span>
+                <span>_____________________________________________________________________________</span>
             </div>
         ';
 
@@ -160,15 +160,15 @@ class previewChangeRequestFormController extends Controller {
         */
         $objectRequest = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">3. </span>
 
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Object Request/Description of Change: </span>
-                <span>_____________________________________________________________</span>
+                <span> Object Request/Description of Change : </span>
+                <span>________________________________________________________________</span>
             </div>
 
-            <table border="0" align="right">
+            <table style="border-collapse: collapse;" border="0" align="right">
                 <tr>
                     <td><br>
                         <span>____________________________________________________________________________________________________</span>
@@ -184,15 +184,15 @@ class previewChangeRequestFormController extends Controller {
         */
         $testingByITAndMIS = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">4. </span>
 
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Testing by IT/MIS Staff </span>
-                <span>_____________________________________________________________________________</span>
+                <span> Testing by IT/MIS Staff: </span>
+                <span>________________________________________________________________________________</span>
             </div>
 
-            <table border="0" align="right">
+            <table style="border-collapse: collapse;" border="0" align="right">
                 <tr>
                     <td><br>
                         <span>____________________________________________________________________________________________________</span>
@@ -208,15 +208,15 @@ class previewChangeRequestFormController extends Controller {
         */
         $dateRequestBy = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">5. </span>
 
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Request by (Sign and Name): </span>
-                <span>___________________________________</span>
+                <span> Request by (Sign and Name): </span>
+                <span>__________________________________</span>
 
                 <span> Date Request: </span>
-                <span>____________________</span>
+                <span>_________________________</span>
             </div>
         ';
 
@@ -227,15 +227,15 @@ class previewChangeRequestFormController extends Controller {
         */
         $impactForChage = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">6. </span>
 
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Impact for change/Result with testing/Module testing: </span>
-                <span>_______________________________________________</span>
+                <span> Impact for change/Result with testing/Module testing:&thinsp; </span>
+                <span>_________________________________________________</span>
             </div>
 
-            <table border="0" align="right">
+            <table style="border-collapse: collapse;" border="0" align="right">
                 <tr>
                     <td><br>
                         <span>____________________________________________________________________________________________________</span>
@@ -251,15 +251,15 @@ class previewChangeRequestFormController extends Controller {
         */
         $controlled = '
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
                 <span style="font-weight: bold;">7. </span>
 
-                <span style="text-align: left; color: black; font-size: 14px; margin: 0px; padding: 2px;"> Controlled/Checked/Tested/Verified by (Sign and Name): </span>
-                <span>____________________________________________</span>
+                <span> Controlled/Checked/Tested/Verified by (Sign and Name):&thinsp; </span>
+                <span>______________________________________________</span>
             </div>
 
-            <table border="0" align="right">
+            <table style="border-collapse: collapse;" border="0" align="right">
                 <tr>
                     <td><br>
                         <span>____________________________________________________________________________________________________</span>
@@ -275,20 +275,20 @@ class previewChangeRequestFormController extends Controller {
         */
         $approvedBy = '
             
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
-                <span style="font-weight: bold;">8. </span>
+                <span style="font-weight: bold;"> 8. </span>
 
-                <span> Approved by Head of IT (Sign and Name): </span>
-                <span>________________________________________________________</span>
+                <span> Approved by Head of IT (Sign and Name):&thinsp; </span>
+                <span>_____________________________________________________________</span>
             </div>
 
-            <div class="row"><br>
+            <div style="font-size: 14px;"><br>
 
-                <span style="font-weight: bold;">9. </span>
+                <span style="font-weight: bold;"> 9. </span>
 
                 <span> Approved by Chief Executive Officer (CEO) (Sign and Name): </span>
-                <span>_____________________________________</span>
+                <span>__________________________________________</span>
             </div>
         ';
 
@@ -301,40 +301,40 @@ class previewChangeRequestFormController extends Controller {
 
             <table border="0">
                 <tr>
-                    <td style="padding: 180px 0px -80px 0px;">
+                    <td style="padding: 200px 270px 0px 0px;">
                         <table border="1" style="border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 10px 65px 10px 10px;">
-                                    <div style="color: black; font-size: 16px; font-style: italic; font-family: khmerosmoullight;"> CEO Approval as: </div>
+                                    <div style="font-size: 12px; font-style: italic; font-family: khmerosmoullight;"> CEO Approval as: </div>
                                     <br>
                                     <table border="0" align="left">
                                         <tr>
                                             <td style="padding: 0px 0px 0px 30px">
-                                                <div style="color: black; font-size: 16px; font-style: italic; font-family: khmerosmoullight;"> - Database Rename </div>
+                                                <div style="font-size: 12px; font-style: italic; font-family: khmerosmoullight;"> - Database Rename </div>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td style="padding: 0px 0px 0px 30px">
-                                                <div style="color: black; font-size: 16px; font-style: italic; font-family: khmerosmoullight;"> - Application Development </div>
+                                                <div style="font-size: 12px; font-style: italic; font-family: khmerosmoullight;"> - Application Development </div>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td style="padding: 0px 0px 0px 30px">
-                                                <div style="color: black; font-size: 16px; font-style: italic; font-family: khmerosmoullight;"> - New Products </div>
+                                                <div style="font-size: 12px; font-style: italic; font-family: khmerosmoullight;"> - New Products </div>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td style="padding: 0px 0px 0px 30px">
-                                                <div style="color: black; font-size: 16px; font-style: italic; font-family: khmerosmoullight;"> - Upgrade Software Version </div>
+                                                <div style="font-size: 12px; font-style: italic; font-family: khmerosmoullight;"> - Upgrade Software Version </div>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <td style="padding: 0px 0px 0px 30px">
-                                                <div style="color: black; font-size: 16px; font-style: italic; font-family: khmerosmoullight;"> - Full Change System </div>
+                                                <div style="font-size: 12px; font-style: italic; font-family: khmerosmoullight;"> - Full Change System </div>
                                             </td>
                                         </tr>
                                     </table>
@@ -343,11 +343,11 @@ class previewChangeRequestFormController extends Controller {
                         </table>
                     </td>
 
-                    <td style="padding: 400px 0px 0px 430px;">
-                        <table border="0" align="left">
+                    <td style="padding: 300px -11px -29px 28px;">
+                        <table border="0" align="right">
                             <tr>
                                 <td>
-                                    <div style="color: black; font-size: 16px;"> TT-ITD-UAMP-FM-009 </div>
+                                    <div style="font-size: 12px;"> TT-ITD-UAMP-FM-009 </div>
                                 </td>
                             </tr>
                         </table>
