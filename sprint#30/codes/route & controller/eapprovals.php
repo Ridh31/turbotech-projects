@@ -57,3 +57,43 @@ public function serverRequestForm(Request $request) {
         ]
     );
 }
+
+/*
+*--------------------------------------------------------------------------
+* Controller: eApprovals ➤ dataCenterEquipmentPlacementRequest
+*--------------------------------------------------------------------------
+*/
+
+public function dataCenterEquipmentPlacementRequest(Request $request) {
+
+    return view("eapprovals::eApprovals/form/dataCenterEquipmentPlacementRequest",
+        [
+            "M1"    => "Home",
+            "R1"    => "/home",
+            "M2"    => "eApprovals",
+            "M3"    => "Forms",
+            "Title" => "Data Center Equipment Placement Request",
+            "Icon"  => "nil #file-alt",
+        ]
+    );
+}
+
+/*
+*--------------------------------------------------------------------------
+* Controller: eApprovals ➤ dataCenterEquipmentRenameRelocateRequest
+*--------------------------------------------------------------------------
+*/
+
+public function dataCenterEquipmentRenameRelocateRequest(Request $request) {
+
+    return view("eapprovals::eApprovals/form/dataCenterEquipmentRenameRelocateRequest",
+        [
+            "M1"    => "Home",
+            "R1"    => "/home",
+            "M2"    => "eApprovals",
+            "M3"    => "Forms",
+            "Title" => "Data Center Equipment Rename/Relocate Request",
+            "Icon"  => "nil #file-alt",
+        ]
+    );
+}
