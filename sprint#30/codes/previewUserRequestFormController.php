@@ -74,6 +74,34 @@ class previewUserRequestFormController extends Controller {
 
     public static function userRequestFormPreviewPDF() {
 
+        /*
+        *--------------------------------------------------------------------------
+        * css selectors
+        *--------------------------------------------------------------------------
+        */
+        $cssSelectors = '
+
+            <style>
+
+                .checkbox-size {
+                    font-size: 16px;
+                }
+
+                .text-size {
+                    font-size: 14px;
+                }
+
+                .object-request-td-checkbox-row1-p {
+                    padding: 0px 90px 0px 0px;
+                }
+
+                .object-request-td-checkbox-row2-p {
+                    padding: 10px 0px 0px 0px;
+                }
+
+            </style>
+        ';
+
        /*
         *--------------------------------------------------------------------------
         * company logo & company name
@@ -130,9 +158,9 @@ class previewUserRequestFormController extends Controller {
         */
         $userDetails = '
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
 
-                <span style="font-size: 14px;"> User&#39;s name: </span>
+                <span class="text-size"> User&#39;s name: </span>
                 <span>__________________________________</span>
 
                 <span> Sex: </span>
@@ -142,12 +170,12 @@ class previewUserRequestFormController extends Controller {
                 <span>______________________________</span>
             </div>
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <span> Position: </span>
                 <span>__________________________________________________________________________________________________</span>
             </div>
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <span> Department: </span>
                 <span>______________________________________________________________________________________________</span>
             </div>
@@ -160,57 +188,57 @@ class previewUserRequestFormController extends Controller {
         */
         $objectRequest = '
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <div> Object Request/Action: </div>
             </div><br>
 
             <table border="0">
                 <tr>
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Add new </span>
+                    <td colspan="1" class="object-request-td-checkbox-row1-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> Add new </span>
                     </td>
 
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Change </span>
+                    <td colspan="1" class="object-request-td-checkbox-row1-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> Change </span>
                     </td>
 
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Delete </span>
+                    <td colspan="1" class="object-request-td-checkbox-row1-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> Delete </span>
                     </td>
 
-                    <td colspan="1" style="padding: 0px 90px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Others </span>
+                    <td colspan="1" class="object-request-td-checkbox-row1-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> Others </span>
                     </td>
                 </tr>
 
                 <tr>
-                    <td style="padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> User in system </span>
+                    <td class="object-request-td-checkbox-row2-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> User in system </span>
                     </td>
 
-                    <td style="padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Chart Account </span>
+                    <td class="object-request-td-checkbox-row2-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> Chart Account </span>
                     </td>
 
-                    <td colspan="2" style="padding: 10px 0px 0px 0px;">
-                        <span style="font-size: 16px;"> ◻ </span>
-                        <span style="font-size: 14px;"> Computer problem solving </span>
+                    <td colspan="2" class="object-request-td-checkbox-row2-p">
+                        <span class="checkbox-size"> ◻ </span>
+                        <span class="text-size"> Computer problem solving </span>
                     </td>
                 </tr>
             </table>
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <span> Others: </span>
                 <span>___________________________________________________________________________________________________</span>
             </div>
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <span> Problem or Upgrade: </span>
                 <span>_____________________________________________________________________________________</span><br><br>
                 <span>___________________________________________________________________________________________________________</span>
@@ -224,27 +252,27 @@ class previewUserRequestFormController extends Controller {
         */
         $requestToDepartment = '
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <div> Request to department: </div>
             </div><br>
 
-            <div style="font-size: 14px;">
+            <div class="text-size">
 
-                <span style="font-size: 14px;"> Date requested: </span>
+                <span> Date requested: </span>
                 <span>_________________________</span>
 
                 <span> Requested by (Sign & name): </span>
                 <span>__________________________________</span>
             </div>
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
                 <span> Approved by (Sign & name): </span>
                 <span>_____________________________________</span>
             </div>
 
-            <div style="font-size: 14px;"><br>
+            <div class="text-size"><br>
 
-                <span style="font-size: 14px;"> Date received: </span>
+                <span> Date received: </span>
                 <span>___________________________</span>
 
                 <span> Received by (Sign & name): </span>
@@ -269,6 +297,6 @@ class previewUserRequestFormController extends Controller {
         ';
 
         // return
-        return $companyLogo .$formSubject .$userDetails .$objectRequest .$requestToDepartment .$formId;
+        return $cssSelectors .$companyLogo .$formSubject .$userDetails .$objectRequest .$requestToDepartment .$formId;
     }
 }
