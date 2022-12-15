@@ -25,29 +25,32 @@
 
             <!-- textarea & button -->
             <div class="min-w-0 flex-1">
-                <form action="#" class="relative">
-                    <div class="overflow-hidden shadow-sm rounded-lg">
-                        <label for="comment" class="sr-only">Write a comment&hellip;</label>
-                        <textarea rows="5" name="comment" id="comment" class="block w-full resize-none border-0 px-5 py-3 text-[color:rgba(var(--ni-gray-500))] focus:outline-none focus:ring-0 sm:text-sm duration-300" placeholder="Write a comment&hellip;" /></textarea>
+                <form action="#" class="relative shadow-sm rounded-lg">
+                    <div class="overflow-hidden rounded-lg">
+                        <div class="pl-5 pr-2 py-3 bg-white">
+                            <label for="comment" class="sr-only">Write a comment&hellip;</label>
+                            <textarea rows="3" name="comment" id="comment" class="block w-full resize-none border-0 text-[color:rgba(var(--ni-gray-500))] focus:outline-0 focus:ring-0 sm:text-sm duration-300" placeholder="Write a comment&hellip;" /></textarea>
+                        </div>
+                        <div class="h-20 bg-white"></div>
                     </div>
 
                     <!-- filename -->
-                    <div class="absolute inset-x-0 bottom-11 flex justify-between py-2 pl-3 pr-2">
-                        <div id="filename" class="overflow-y-auto pb-2 flex gap-2"></div>
+                    <div class="absolute inset-x-0 bottom-9 flex justify-between py-2 pl-3 pr-2">
+                        <div id="filename" class="cursor-grab overflow-y-auto pb-2 flex gap-2"></div>
                     </div>
 
                     <!-- save button -->
                     <div class="absolute inset-x-0 bottom-0 flex justify-between py-2 pl-3 pr-2">
                         <div class="flex-shrink-0">
-                            <button type="button" class="inline-flex items-center border border-transparent bg-[color:rgba(var(--ni-primary-500))] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[color:rgba(var(--ni-primary-600))] focus:outline-none rounded-md duration-300">Save</button>
+                            <button type="button" class="inline-flex items-center button -primary text-sm py-1 waves-effect">Save</button>
                         </div>
                     </div>
 
                     <!-- attachments -->
                     <div class="absolute inset-x-0 left-auto bottom-0 flex justify-between py-2 pl-3 pr-2">
                         <div class="flex-shrink-0">
-                            <input type="file" name="file[]" id="file-upload" class="hidden" multiple>
-                            <div id="attach-file" class="cursor-pointer p-2 hover:bg-[color:rgba(var(--ni-gray-200))] text-[color:rgba(var(--ni-gray-400))] hover:text-[color:rgba(var(--ni-gray-500))] rounded-md duration-300" title="Attach file">
+                            <input type="file" name="file" id="file-upload" class="hidden" multiple>
+                            <div id="attach-file" class="cursor-pointer p-1 hover:bg-[color:rgba(var(--ni-gray-200))] text-[color:rgba(var(--ni-gray-400))] hover:text-[color:rgba(var(--ni-gray-500))] rounded-md duration-300 waves-effect" title="Attach file">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
                             </div>
                         </div>
@@ -64,6 +67,11 @@
 
 <script>
 
+    /*
+    *--------------------------------------------------------------------------
+    * upload attachments (main function)
+    *--------------------------------------------------------------------------
+    */
     const attachmentUploadInComment = () => {
 
         const dropFile   = $("#drop-file");
@@ -74,37 +82,96 @@
         // hidden filename by default
         filename.addClass("hidden");
 
-        // append filename function
-        const appendAndRemoveFilenames = (file) => {
+        let attachment_index = -1;
 
-            // append filename
-            filename.append(`
-                <div class="select-none flex gap-1 px-3 py-1 bg-[color:rgba(var(--ni-gray-400))] text-xs text-white rounded-xl">
-                    <span class="my-auto">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
-                    </span>
-                    <span class="my-auto">${file.name}</span>
-                    <span class="cursor-pointer my-auto hover:text-[color:rgba(var(--ni-danger-500))] duration-300">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </span>
-                </div>
-            `);
-            
-            // get x icons
-            const removeFile = $("#filename div span:last-child");
-            
-            // onclick x remove each filename
-            removeFile.each(function() {
-                $(this).click(function() {
+        /*
+        *--------------------------------------------------------------------------
+        * append attachment names to UI after upload function
+        *--------------------------------------------------------------------------
+        */
+        const appendFilenames = (fileLists, defaultFiles, fileLength) => {
 
-                    const parent = this.parentNode;
-                    parent.remove();
-                });
+            // append filename to UI
+            $.each(defaultFiles, function(fileLength, file) {
+
+                // increase index
+                attachment_index++;
+
+                filename.append(`
+                    <div class="select-none flex gap-1 px-3 py-1 bg-[color:rgba(var(--ni-gray-400))] text-xs text-white rounded-xl">
+                        <span class="my-auto">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                        </span>
+                        <span class="my-auto whitespace-nowrap" data-name-id="${attachment_index}">${file.name}</span>
+                        <span class="cursor-pointer my-auto hover:text-[color:rgba(var(--ni-danger-500))] duration-300" data-atttachment-id="${attachment_index}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </span>
+                    </div>
+                `);
+            });
+
+            const filenameAfterAppend = filename.find("span:nth-child(2)");
+
+            var duplicate = {};
+
+            // avoid duplicate fileupload
+            filenameAfterAppend.each(function() {
+                
+                var name = $(this).text();
+
+                // if name is already append
+                if ( duplicate[name] ) {
+
+                    // remove duplicate append files
+                    $(this).parent().remove();
+
+                    // empty file from array if duplicated
+                    const duplicateFileIndex = $(this).data("name-id");
+                    delete fileLists[duplicateFileIndex];
+
+                } else {
+                    duplicate[name] = true;
+                }
             });
         }
 
-        // upload or drop file
+        /*
+        *--------------------------------------------------------------------------
+        * remove attachment names and attachment files function
+        *--------------------------------------------------------------------------
+        */
+        const removeAttachments = (files) => {
+
+            const removeIcons = ("span:last-child");
+            var remainFiles   = [];
+
+            filename.on("click", removeIcons, function() {
+
+                const fileIndex   = $(this).data("atttachment-id");
+                const parent      = $(this).parent();
+
+                // remove attachment names from UI
+                parent.remove();
+
+                // empty file from array
+                var deleteFiles = delete files[fileIndex];
+            });
+
+            // get remain files after remove
+            remainFiles = files;
+
+            // call send date function after updated files
+            sendData(remainFiles);
+        }
+
+        /*
+        *--------------------------------------------------------------------------
+        * drag and drop or upload files function
+        *--------------------------------------------------------------------------
+        */
         const dropAndUploadFiles = () => {
+
+            var fileLists = [];
 
             // drag files
             dropFile.on("drop", function(ev) {
@@ -116,17 +183,19 @@
                     if ( ev.originalEvent.dataTransfer.files.length ) {
 
                         const droppedFiles = ev.originalEvent.dataTransfer.files;
+                        const droppedFilesLength = ev.originalEvent.dataTransfer.files.length;
 
+                        filename.removeClass("hidden");
+
+                        // push each files to file lists after dropped
                         $.each(droppedFiles, function(i, file) {
-                            
-                            filename.removeClass("hidden");
-
-                            // display each filenames after drop
-                            appendAndRemoveFilenames(file);
+                            fileLists.push(file);
                         });
+
+                        // display each filenames after dropped files
+                        appendFilenames(fileLists, droppedFiles, droppedFilesLength);
                     }
                 }
-                return false;
             });
 
             dropFile.on("dragover", function(ev) {
@@ -145,23 +214,87 @@
 
                 filename.removeClass("hidden");
 
-                // display each filenames after upload
+                // push each files to file lists after upload
                 $.each(uploadFile, function(i, file) {
-
-                    appendAndRemoveFilenames(file);
+                    fileLists.push(file);
                 });
 
-                // reset value after upload if it has already been upload & remove
-                $(this).val("");
+                // display each filenames after uploaded files
+                appendFilenames(fileLists, uploadFile, uploadFileLength);
+            });
+
+            // get last updated files for remove
+            removeAttachments(fileLists);
+        }
+
+        /*
+        *--------------------------------------------------------------------------
+        * save button => onclick get last updated files from users
+        *--------------------------------------------------------------------------
+        */
+        const sendData = (lastUpdatedFiles) => {
+
+            const saveButton = $("button");
+
+            // onclick save button
+            saveButton.click(function() {
+                console.log(lastUpdatedFiles);
             });
         }
 
-        // call sub functions
+        // call drop and upload files functions
         dropAndUploadFiles();
+
     }
 
-    // call function
+    // call main function
     attachmentUploadInComment();
+
+    /*
+    *--------------------------------------------------------------------------
+    * make attachments able to scroll
+    *--------------------------------------------------------------------------
+    */
+    // slider item
+    const attachments = document.querySelector("#filename");
+
+    // slider attachments function
+    const slider = (sliderItem, sliderSpeed) => {
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        sliderItem.addEventListener("mousedown", (e) => {
+
+            isDown = true;
+            sliderItem.classList.add("active");
+            startX = e.pageX - sliderItem.offsetLeft;
+            scrollLeft = sliderItem.scrollLeft;
+        });
+
+        sliderItem.addEventListener("mouseleave", () => {
+            isDown = false;
+            sliderItem.classList.remove("active");
+        });
+
+        sliderItem.addEventListener("mouseup", () => {
+            isDown = false;
+            sliderItem.classList.remove("active");
+        });
+
+        sliderItem.addEventListener("mousemove", (e) => {
+
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - sliderItem.offsetLeft;
+            const walk = (x - startX) * sliderSpeed;
+            sliderItem.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // call slider function
+    slider(attachments, 1);
 
 </script>
 
