@@ -91,7 +91,7 @@ const attachmentUploadInComment = () => {
         // get remain files after remove
         remainFiles = files;
 
-        // call send date function after updated files
+        // call send data function after updated files
         sendData(remainFiles);
     }
 
