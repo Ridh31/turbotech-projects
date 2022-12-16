@@ -125,9 +125,9 @@
                     // remove duplicate append files
                     $(this).parent().remove();
 
-                    // empty file from array if duplicated
+                    // set duplicated files to ""
                     const duplicateFileIndex = $(this).data("name-id");
-                    delete fileLists[duplicateFileIndex];
+                    fileLists[duplicateFileIndex] = null;
 
                 } else {
                     duplicate[name] = true;
@@ -140,7 +140,7 @@
         * remove attachment names and attachment files function
         *--------------------------------------------------------------------------
         */
-        const removeAttachments = (files) => {
+        const removeAttachments = (files, filesLength) => {
 
             const removeIcons = ("span:last-child");
             var remainFiles   = [];
@@ -153,10 +153,10 @@
                 // remove attachment names from UI
                 parent.remove();
 
-                // empty file from array
-                var deleteFiles = delete files[fileIndex];
+                // set removed files to ""
+                files[fileIndex] = null;
             });
-
+            
             // get remain files after remove
             remainFiles = files;
 
@@ -224,7 +224,16 @@
             });
 
             // get last updated files for remove
-            removeAttachments(fileLists);
+            removeAttachments(fileLists, fileLists.length);
+        }
+
+        /*
+        *--------------------------------------------------------------------------
+        * redundant files
+        *--------------------------------------------------------------------------
+        */
+        function redundantFiles(element){
+            return (element != null && element !== false && element !== "");
         }
 
         /*
@@ -238,7 +247,10 @@
 
             // onclick save button
             saveButton.click(function() {
-                console.log(lastUpdatedFiles);
+
+                // remove redundant files
+                var attachments = lastUpdatedFiles.filter(redundantFiles);
+                console.log(attachments);
             });
         }
 
