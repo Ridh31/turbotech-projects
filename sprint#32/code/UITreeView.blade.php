@@ -15,7 +15,7 @@
         <div class="divide-x divide-[color:rgba(var(--ni-gray-300))] flex border border-[color:rgba(var(--ni-gray-300))]">
 
             <!-- tree view container -->
-            <div class="w-[25%] p-5">
+            <div class="w-[40%] sm:w-[25%] p-5">
 
                 <!-- tree view -->
                 <ul id="tree-view" class="select-none m-0 pl-6 leading-8 list-none">       
@@ -157,9 +157,9 @@
                 </ul>
             </div>
             <!-- right side: contents -->
-            <div class="w-[75%] p-5">
-                <div id="tree-view-contents">
-                    <h3 class="text-[color:rgba(var(--ni-primary-500))]">HIM ROUNGRIDH</h3>
+            <div class="w-[60%] sm:w-[75%] p-5">
+                <div id="tree-view-contents" class="sticky top-0 z-10">
+                    <h3 class="text-[color:rgba(var(--ni-primary-500))]">HELLO WORLD!</h3>
                 </div>
             </div>
         </div>
@@ -201,6 +201,9 @@
 
                 /* hide the lines on the last item */
                 #tree-view li:last-child:after{display:none;}
+
+                /* active color */
+                .active{color: #0EA5E9;}
             </style>
         `);
 
@@ -266,14 +269,22 @@
     // show each data group content
     const displayDataGroupContents = () => {
 
+        // add active to each li
+        $("#data-group").on("click", "li", function () {
+            $("#data-group li.active").removeClass("active");
+            $(this).addClass("active");
+        });
+
         // add hover class to data group list
         dataGroupTree.each(function() {
 
             // add styles to each data group tree node
-            $(this).addClass("hover:text-[color:rgba(var(--ni-primary-500))]");
+            $(this).addClass("hover:text-[color:rgba(var(--ni-primary-500))]");        
 
             // onclick each data group tree node
             $(this).click(function() {
+
+                $(this).focus().addClass("text-[color:rgba(var(--ni-primary-500)]");
 
                 // get data title
                 const dataTitle = (`<h3 class="text-[color:rgba(var(--ni-primary-500))]">${$(this).data("title")}</h3>`);

@@ -12,25 +12,25 @@
     <div class="cardContainer p-2 sm:p-5">
 
         <!-- container -->
-        <div class="border border-[color:rgba(var(--ni-gray-300))] select-none">
+        <div class="relative border border-[color:rgba(var(--ni-gray-300))] select-none overflow-auto h-full">
 
             <!-- download pdf & print report -->
             <div class="relative flex gap-2 px-1 pt-1 pb-1.5 bg-slate-100">
 
                 <!-- download pdf button -->
-                <button type="button" id="export-to-pdf" title="Download PDF" class="hover:scale-125 duration-200">
+                <button type="button" id="export-current-page-to-pdf" title="Export Current Page to PDF" class="hover:scale-125 duration-200">
                     <svg class="w-5 h-5" viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48"> <polygon fill="#90CAF9" points="40,45 8,45 8,3 30,3 40,13"/> <polygon fill="#E1F5FE" points="38.5,14 29,14 29,4.5"/> <g fill="#1976D2"> <rect x="16" y="21" width="17" height="2"/> <rect x="16" y="25" width="13" height="2"/> <rect x="16" y="29" width="17" height="2"/> <rect x="16" y="33" width="13" height="2"/> </g></svg>
                 </button>
 
                 <!-- pdf option -->
                 <div id="pdf-options" class="absolute top-8 flex justify-center items-center p-3 z-10 bg-white text-sm shadow-lg rounded-md">
                     <form class="flex flex-col space-y-3">
-                        <div class="font-medium text-[color:rgba(var(--ni-primary-500))]">Export PDF</div>
+                        <div class="font-medium text-[color:rgba(var(--ni-primary-500))]">Export Current Page to PDF</div>
 
-                        <!-- select -->
+                        <!-- select layout -->
                         <div class="flex gap-5">
                             <label for="pdf-layouts" class="my-auto">Layout</label>
-                            <select id="pdf-layouts" name="pdf-layouts" class="cursor-pointer w-40 p-1 bg-slate-100 text-[color:rgba(var(--ni-gray-500))] focus:outline-none rounded-md">
+                            <select id="pdf-layouts" name="pdf-layouts" class="cursor-pointer w-36 ml-3.5 p-1 bg-slate-100 text-[color:rgba(var(--ni-gray-500))] focus:outline-none rounded-md">
                                 <option value="Portrait">Portrait</option>
                                 <option value="Landscape">Landscape</option>
                             </select>
@@ -56,11 +56,10 @@
                     <form class="flex flex-col space-y-3">
                         <div class="font-medium text-[color:rgba(var(--ni-primary-500))]">Export Excel</div>
 
-                        <!-- select -->
+                        <!-- excel filename -->
                         <div class="flex text-[color:rgba(var(--ni-gray-500))]">
                             <label for="excel-name" class="mr-5 my-auto">Filename</label>
-                            <input type="text" name="excel-name" id="excel-name" class="w-40 px-3 py-1 bg-slate-100 focus:outline-none rounded-md">
-                            <div class="ml-2 my-auto">.xls</div>
+                            <input type="text" name="excel-name" id="excel-name" class="w-36 px-3 py-1 bg-slate-100 placeholder:text-[color:rgba(var(--ni-gray-300))] focus:outline-none rounded-md" placeholder="e.g. Report">
                         </div>
 
                         <!-- buttons -->
@@ -109,7 +108,7 @@
                 <div class="space-y-10">
                     <!-- company logo -->
                     <div class="flex gap-3 justify-center items-center flex-shrink-0">
-                        <img id="logo" class="w-32" src="https://www.turbotech.com/storages/assets/img/system/turbotech.png" alt="TURBOTECH">
+                        <img id="logo" class="w-32 object-contain" src="https://www.turbotech.com/storages/assets/img/system/turbotech.png" alt="TURBOTECH"><!-- asset('images/logo/turbotech-1.png') -->
                         <div class="text-center text-xl text-[color:rgba(var(--ni-primary-500))]">
                             <div class="font-bold">ក្រុមហ៊ុន ធើបូថេក ឯ.ក</div>
                             <div class="font-medium">TURBOTECH CO.,LTD</div>
@@ -138,19 +137,47 @@
                     <span>Building</span>
                 </div>
 
-                <div id="report-containter" class="overflow-auto max-h-96 border-y border-[color:rgba(var(--ni-gray-500))] mt-2">
+                <div id="report-container" class="mt-2">
+
+                    <!-- loading table -->
+                    <div id="loading-table" class="relative w-full border-collapse" data-table-name="Report">
+                        <div id="loading-header">
+                            <div class="divide-x divide-white grid grid-cols-7 w-full animate-pulse">
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                                <div class="w-full bg-[color:rgba(var(--ni-primary-400))] p-3"></div>
+                            </div>
+                        </div>
+                        <div id="loading-body" class="divide-y divide-white"></div>
+
+                        <!-- loading spinner -->
+                        <div class="absolute flex inset-x-0 left-1/2 top-1/2">
+                            <div class="relative">
+                                
+                                <!-- outer ring-->
+                                <div class="w-12 h-12 rounded-full absolute border-8 border-solid border-gray-200"></div>
+
+                                <!-- inner ring -->
+                                <div class="w-12 h-12 rounded-full animate-spin absolute border-8 border-solid border-[color:rgba(var(--ni-primary-500))] border-t-transparent"></div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- table -->
-                    <table id="report-table" class="relative w-full border-x border-[color:rgba(var(--ni-gray-500))] border-collapse" data-table-name="Report">
-                        <thead class="z-10 sticky top-0">
+                    <table id="report-table" class="relative w-full border-collapse border-y border-[color:rgba(var(--ni-gray-500))]" data-table-name="Report">
+                        <thead>
                             <tr class="-primary">
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Code</th>
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Name</th>
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Username</th>
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Email</th>
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Zip Cope</th>
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Phone</th>
-                                <th class="text-white text-center px-1 py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">Website</th>
+                                <th class="text-white text-center py-0.5 border-x border-[color:rgba(var(--ni-gray-500))]">ID</th>
+                                <th class="text-white text-center py-0.5 border-r border-[color:rgba(var(--ni-gray-500))]">Title</th>
+                                <th class="text-white text-center py-0.5 border-r border-[color:rgba(var(--ni-gray-500))]">Price</th>
+                                <th class="text-white text-center py-0.5 border-r border-[color:rgba(var(--ni-gray-500))]">Category</th>
+                                <th class="text-white text-center py-0.5 border-r border-[color:rgba(var(--ni-gray-500))]">Rate</th>
+                                <th class="text-white text-center py-0.5 border-r border-[color:rgba(var(--ni-gray-500))]">Count</th>
+                                <th class="text-white text-center py-0.5 border-r border-[color:rgba(var(--ni-gray-500))]">Description</th>
                             </tr>
                         </thead>
 
@@ -160,7 +187,7 @@
                         <!-- tfoot : showing no results found -->
                         <tfoot>
                             <tr class="excludeThisClass">
-                                <td id="no-results-found" style="text-align: center;">No results found</td>
+                                <td id="no-results-found" class="border-x border-[color:rgba(var(--ni-gray-500))]" style="text-align: center;">No results found</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -187,19 +214,50 @@
 
     /*
     *--------------------------------------------------------------------------
+    * loading
+    *--------------------------------------------------------------------------
+    */
+    const dislayLoading = (visibility) => {
+
+        const loadingTable  = $("#loading-table");
+        const loadingHeader = $("#loading-header");
+        const loadingBody   = $("#loading-body");
+
+        // loading visibility
+        loadingTable.addClass(visibility);
+
+        for ( var i = 0; i < 10; i++ ) {
+
+            loadingBody.append(`
+                <div class="divide-x divide-white grid grid-cols-7 w-full animate-pulse">
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                    <div class="w-full bg-[color:rgba(var(--ni-gray-300))] p-3"></div>
+                </div>
+            `);
+        }
+    };
+
+    /*
+    *--------------------------------------------------------------------------
     * get data from api url mockup
     *--------------------------------------------------------------------------
     */
     const getMockupData = () => {
 
-        const reportDate = $("#report-date");
-        const date       = new Date();
-        const month      = ["January", "February", "March", "April", "May", "June", 
-                            "July", "August", "September", "October", "November", "December"];
+        const reportDate  = $("#report-date");
+        const reportTable = $("#report-table");
+        const date        = new Date();
+        const month       = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-        const tbody   = $("table tbody");
-        const URL     = ("https://jsonplaceholder.typicode.com/users");
-        const headers = { headers: { "Content-Type": "application/json; charset=utf-8" }}
+        const tbody    = $("table tbody");
+        const apiBase  = ("https://jsonplaceholder.typicode.com");
+        const endpoint = ("/users");
+        const headers  = { headers: { "Content-Type": "application/json; charset=utf-8" }};
 
         // display report date
         reportDate.html(`
@@ -208,33 +266,41 @@
             <span>${date.getUTCFullYear()}</span>
         `);
 
+        // show loading before content load
+        reportTable.addClass("hidden");
+        dislayLoading("");
+
         // fetch user information mockup
-        fetch(URL, headers)
+        fetch(apiBase + endpoint, headers)
         .then((response) => {
             const users = response.json();
             return users;
         })
-        .then((users) => {
+        .then((json) => {
 
             // append user information to table row
-            $.each(users, function(index, user) {
+            $.each(json, function(index, user) {
 
                 // add \n and \t for copy to clipboard
                 tbody.append(`
                     <tr>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.id}\t</td>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.name}\t</td>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.username}\t</td>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.email}\t</td>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.address.zipcode}\t</td>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.phone}\t</td>
-                        <td class="px-1 py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.website}\n</td>
+                        <td class="py-0.5 border border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.id}\t</td>
+                        <td class="py-0.5 border-r border-t border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.name}\t</td>
+                        <td class="py-0.5 border-r border-t border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.username}\t</td>
+                        <td class="py-0.5 border-r border-t border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.email}\t</td>
+                        <td class="py-0.5 border-r border-t border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.address.zipcode}\t</td>
+                        <td class="py-0.5 border-r border-t border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.phone}\t</td>
+                        <td class="py-0.5 border-r border-t border-b-0 border-[color:rgba(var(--ni-gray-500))]">${user.website}\n</td>
                     </tr>
                 `);
             });
 
+            // remove loading after content load
+            dislayLoading("hidden");
+            reportTable.removeClass("hidden");
+
             // pagination => show 10 rows per page
-            pagination(10, $("#report-table tbody tr"));
+            // pagination(10, $("#report-table tbody tr"), "");
         })
         .catch((error) => {
             console.log(error);
@@ -249,18 +315,48 @@
     * export pdf
     *--------------------------------------------------------------------------
     */
-    const exportPDFIcon   = $("#export-to-pdf");
-    const PDFOptions      = $("#pdf-options");
-    const PDFLayouts      = $("#pdf-layouts");
-    const exportPDFButton = $("#export-pdf");
-    const cancelExportPDF = $("#cancel-export-pdf");
-    const reportContainer = $("#report-containter");
+    const exportCurrentPageToPDFIcon   = $("#export-current-page-to-pdf");
+    const PDFOptions                   = $("#pdf-options");
+    const PDFLayouts                   = $("#pdf-layouts");
+    const exportPDFButton              = $("#export-pdf");
+    const cancelExportPDF              = $("#cancel-export-pdf");
+    const reportContainer              = $("#report-container");
+
+    // change text size while export
+    const changeTextSize = (textSizeInPixels) => {
+
+        // change text size for thead to prevent table cells break
+        $("#report-table thead tr th").each(function() {
+            $(this).css("font-size", textSizeInPixels);
+        });
+
+        // change text size for tbody to prevent table cells break
+        $("#report-table tbody tr td").each(function() {
+            $(this).css("font-size", textSizeInPixels);
+        });
+    }
+
+    // change back to original text size after export pdf
+    const changeBackToOriginalTextSize = (defaultSize) => {
+
+        // change text size for thead to prevent table cells break
+        $("#report-table thead tr th").each(function() {
+            $(this).css("font-size", "");
+            $(this).addClass(defaultSize);
+        });
+
+        // change text size for tbody to prevent table cells break
+        $("#report-table tbody tr td").each(function() {
+            $(this).css("font-size", "");
+            $(this).addClass(defaultSize);
+        });
+    }
 
     // hidden pdf options by default
     PDFOptions.addClass("hidden");
 
     // onlick export pdf icon
-    exportPDFIcon.click(function() {
+    exportCurrentPageToPDFIcon.click(function() {
 
         $("#excel-options").addClass("hidden");
         PDFOptions.toggleClass("hidden");
@@ -268,9 +364,13 @@
         // onclick export pdf button
         exportPDFButton.click(function() {
 
-            $("#report-table tbody tr").css({
-                "opacity": "1"
-            });
+            // make other row visible before export pdf
+            // $("#report-table tbody tr").css({
+            //     "opacity": "1"
+            // });
+            
+            // change text size while exporting
+            changeTextSize("8px");
 
             // change logo during export prevent image lost for html2pdf
             $("#logo").attr("src","{{ asset('images/logo/turbotech-1.png') }}");
@@ -296,7 +396,7 @@
 
         // export pdf options
         html2pdf(element, {
-            margin: [0.5, 0.1, 0.5, 0.1],
+            margin: [0.5, 0.2],
             padding: 0,
             filename: "Report.pdf",
             image: { 
@@ -313,7 +413,13 @@
                 format: "A4",
                 orientation: `${layout}`,
             },
-            class: exportPortableDocumentFormat
+            class: exportPortableDocumentFormat,
+            width: 320,
+            height: 220
+        })
+
+        .then((canvas) => {
+            changeBackToOriginalTextSize("text-sm");
         });
     };
 
@@ -322,10 +428,10 @@
     * export excel
     *--------------------------------------------------------------------------
     */
-    const exportToExcel = $("#export-to-excel");
-    const reportTable   = $("#report-table");
-    const excelOptions  = $("#excel-options");
-    const excelName     = $("#excel-name");
+    const exportToExcel     = $("#export-to-excel");
+    const reportTable       = $("#report-table");
+    const excelOptions      = $("#excel-options");
+    const excelName         = $("#excel-name");
     const exportExcelButton = $("#export-excel");
     const cancelExportExcel = $("#cancel-export-excel");
 
@@ -419,12 +525,12 @@
     */
     const printIcon = $("#print-pdf");
     const contents  = ("content-pdf");
-    
+
     // onclick print icon
     printIcon.click(function() {
 
-        // remove limit height to show all rows for priinting
-        reportContainer.removeClass("overflow-auto max-h-96");
+        // change text size while printing
+        changeTextSize("8px");
 
         // call print report function
         printReport(contents);
@@ -440,12 +546,12 @@
         document.body.innerHTML = printContents;
 
         // show full table rows while printing
-        pagination($("#report-table tbody tr").length, $("#report-table tbody tr"));
+        // pagination($("#report-table tbody tr").length, $("#report-table tbody tr"), "");
         
         // show full table row contents while printing
-        $("#report-table tbody tr").css({
-            "opacity": "1"
-        });
+        // $("#report-table tbody tr").css({
+        //     "opacity": "1"
+        // });
 
         // print modal and options
         window.print();
@@ -487,9 +593,9 @@
         tableRow.filter(function() {
 
             // make opacity visible for each paginations while filtering
-            $("#report-table tbody tr").css({
-                "opacity": "1"
-            });
+            // $("#report-table tbody tr").css({
+            //     "opacity": "1"
+            // });
 
             const filterTableRowResults = $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
 
@@ -512,45 +618,48 @@
     * pagination
     *--------------------------------------------------------------------------
     */
-    const pagination = (number, tableRow) => {
+    // const pagination = (number, tableRow, visibility) => {
 
-        const contentPDF           = $("#content-pdf");
-        const totalTableRows       = tableRow;
-        const totalTableRowLengths = $("#report-table tbody tr").length;
-        const rowPerPage           = number;
+    //     const contentPDF           = $("#content-pdf");
+    //     const totalTableRows       = tableRow;
+    //     const totalTableRowLengths = $("#report-table tbody tr").length;
+    //     const rowPerPage           = number;
         
-        // page number
-        const pageNumbers  = totalTableRowLengths / rowPerPage;
-        contentPDF.after(`<div id="paginations" class="flex justify-end gap-2 p-5"></div>`);
+    //     // page number
+    //     const pageNumbers  = totalTableRowLengths / rowPerPage;
+    //     contentPDF.after(`<div id="paginations" class="flex justify-end gap-2 p-5 ${visibility}"></div>`);
 
-        const paginations       = $("#paginations");
-        const firstPagination   = $("#paginations a:first");
+    //     const paginations       = $("#paginations");
+    //     const firstPagination   = $("#paginations a:first");
 
-        for( i = 0; i < pageNumbers; i++ ) {
-            var pageNum = i + 1;
-            paginations.append('<a href="javascript:void(0);" rel="' + i + '" class="-primary px-3 py-1 focus:bg-[color:rgba(var(--ni-danger-500))] shadow-md rounded-md">' + pageNum + '</a>');
-        }
+    //     for( var i = 0; i < pageNumbers; i++ ) {
+    //         var pageNum = i + 1;
+    //         paginations.append('<a href="javascript:void(0);" rel="' + i + '" class="-primary px-3 py-1 focus:bg-[color:rgba(var(--ni-danger-500))] shadow-md rounded-md">' + pageNum + '</a>');
+    //     }
 
-        // hide table rows
-        totalTableRows.hide();
+    //     // hide table rows
+    //     totalTableRows.hide();
 
-        // show only 10 per pages
-        totalTableRows.slice(0, rowPerPage).show();
+    //     // show only 10 per pages
+    //     totalTableRows.slice(0, rowPerPage).show();
 
-        firstPagination.addClass("active");
+    //     firstPagination.addClass("active");
+        
+    //     $("#paginations a").bind("click", function() {
 
-        $("#paginations a").bind("click", function() {
+    //         // onclick pagination hidden no results found
+    //         noResultFound.addClass("hidden");
 
-            $("#paginations a").removeClass("active");
-            $(this).addClass("active");
+    //         $("#paginations a").removeClass("active");
+    //         $(this).addClass("active");
 
-            const currentPage = $(this).attr("rel");
-            const startItem   = currentPage * rowPerPage;
-            const endItem     = startItem + rowPerPage;
+    //         const currentPage = $(this).attr("rel");
+    //         const startItem   = currentPage * rowPerPage;
+    //         const endItem     = startItem + rowPerPage;
 
-            totalTableRows.css("opacity", "0.0").hide().slice(startItem, endItem).css("display", "table-row").animate({opacity: 1}, 300);
-        });
-    };
+    //         totalTableRows.css("opacity", "0.0").hide().slice(startItem, endItem).css("display", "table-row").animate({opacity: 1}, 300);
+    //     });
+    // };
 
 </script>
 
