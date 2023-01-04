@@ -106,9 +106,14 @@
 
                 <!-- company logo & subject -->
                 <div class="space-y-10">
+
                     <!-- company logo -->
                     <div class="flex gap-3 justify-center items-center flex-shrink-0">
-                        <img id="logo" class="w-32 object-contain" src="https://www.turbotech.com/storages/assets/img/system/turbotech.png" alt="TURBOTECH"><!-- asset('images/logo/turbotech-1.png') -->
+
+                        <!-- set image base on current baseUrl; otherwise, the image will not load while export pdf  -->
+                        <img id="logo" class="w-32 object-contain" src="http://172.26.16.95:8080/images/logo/turbotech-1.png" alt="TURBOTECH">
+
+                        <!-- company title -->
                         <div class="text-center text-xl text-[color:rgba(var(--ni-primary-500))]">
                             <div class="font-bold">ក្រុមហ៊ុន ធើបូថេក ឯ.ក</div>
                             <div class="font-medium">TURBOTECH CO.,LTD</div>
@@ -373,7 +378,7 @@
             changeTextSize("8px");
 
             // change logo during export prevent image lost for html2pdf
-            $("#logo").attr("src","{{ asset('images/logo/turbotech-1.png') }}");
+            // $("#logo").attr("src","{{ asset('images/logo/turbotech-1.png') }}");
 
             const selectedLayout = PDFLayouts.val();
 
@@ -384,7 +389,7 @@
         // cancel export pdf button
         cancelExportPDF.click(function() {
 
-            $("#logo").attr("src","https://www.turbotech.com/storages/assets/img/system/turbotech.png");
+            // $("#logo").attr("src","https://www.turbotech.com/storages/assets/img/system/turbotech.png");
             PDFOptions.addClass("hidden");
         });
     });
